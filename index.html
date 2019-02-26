@@ -1,12 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tesla Bio</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/Favicon.jpg" type="image/x-icon">
 </head>
+
 <body>
+    <!-- header -->
+    <header>
+        <p>header</p>
+    </header>
+    <!-- main section -->
+    <main>
+
+        <!-- content+nav+aside -->
+
+        <!-- main-nav-list-group -->
+        <div class="mainNavListGroup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-bio-list" data-toggle="list"
+                                href="#list-bio" role="tab" aria-controls="bio">BIOGRAFIJA </a>
     
+                            <a class="list-group-item list-group-item-action" id="list-raneGod-list" data-toggle="list"
+                                href="#list-raneGod" role="tab" aria-controls="raneGod">Rođenje i rane godine</a>
+                            <a class="list-group-item list-group-item-action" id="list-srGod-list" data-toggle="list" href="#list-srGod"
+                                role="tab" aria-controls="srGod">Srednje godine</a>
+                            <a class="list-group-item list-group-item-action" id="list-zlGod-list" data-toggle="list" href="#list-zlGod"
+                                role="tab" aria-controls="zlGod">Zlatne godine stvaralaštva</a>
+                            <a class="list-group-item list-group-item-action" id="list-pozGod-list" data-toggle="list" href="#list-pozGod"
+                                role="tab" aria-controls="pozGod">Pozne godine i smrt</a>
+    
+                            <a class="list-group-item list-group-item-action" id="list-ratStruja-list" data-toggle="list"
+                                href="#list-ratStruja" role="tab" aria-controls="ratStruja">RAT STRUJA</a>
+                            <a class="list-group-item list-group-item-action" id="list-teslaDrustvo-list" data-toggle="list"
+                                href="#list-teslaDrustvo" role="tab" aria-controls="teslaDrustvo">TESLA I DRUŠTVO</a>
+                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                                href="#list-settings" role="tab" aria-controls="settings">PRONALASCI I NAGRADE</a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active border" id="list-bio" role="tabpanel" aria-labelledby="list-bio-list">
+                                <p>Nikola Tesla (10. jul 1856 — 7. januar 1943) bio je jedan od najpoznatijih srpskih i
+                                    svetskih pronalazača i naučnika u oblasti fizike, elektrotehnike i radiotehnike.</p>
+    
+                                <p>Najznačajniji Teslini pronalasci su polifazni sistem, obrtno magnetsko polje, asinhroni
+                                    motor, sinhroni motor i Teslin transformator. Takođe, otkrio je jedan od načina za
+                                    generisanje visokofrekventne struje, dao je značajan doprinos u prenosu i modulaciji
+                                    radio-signala, a ostali su zapaženi i njegovi radovi u oblasti rendgenskih zraka.</p>
+    
+                                <p>Njegov sistem naizmeničnih struja je omogućio znatno lakši i efikasniji prenos
+                                    električne
+                                    energije na daljinu. Bio je ključni čovek u izgradnji prve hidrocentrale na Nijagarinim
+                                    vodopadima.</p>
+    
+                                <p>Preminuo je u svojoj 87. godini, siromašan i zaboravljen.</p>
+    
+                                <p>Jedini je Srbin po kome je nazvana jedna međunarodna jedinica mere, jedinica mere za
+                                    gustinu magnetnog fluksa ili jačinu magnetnog polja — tesla.</p>
+    
+                                <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega u
+                                    oblasti
+                                    elektrotehnike 112.</p>
+                            </div>
+                            <div class="tab-pane fade border" id="list-raneGod" role="tabpanel" aria-labelledby="list-raneGod-list">
+                                <h3>Rođenje, detinjstvo, porodica</h3>
+                                <p>Nikola je rođen 10. jula u Smiljanu u Lici, kao četvrto dete od petoro dece Milutina,
+                                    srpskog pravoslavnog sveštenika, i majke Georgine, u Vojnoj krajini Austrijskog carstva
+                                    nedaleko od granice sa Osmanskim carstvom. Kršten je u srpskoj pravoslavnoj Crkvi Sv.
+                                    Petra i Pavla u Smiljanu. Ime Nikola je dobio po jednom i drugom dedi. Dete je bilo
+                                    bolešljivo i slabo pa su krštenje zakazali mimo običaja, sutradan, bojeći se da neće
+                                    preživeti. Krštenje deteta obavio je pop Toma Oklopdžija u crkvi Svetog Petra i Pavla u
+                                    Smiljanu, a kum je bio Milutinov prijatelj, kapetan Jovan Drenovac. U crkvenim knjigama
+                                    je zapisano crkvenoslovenski da je dete dobilo ime Nikolaj, a zapravo je dobilo ime po
+                                    jednom i drugom dedi Nikola. Nikolin otac je bio nadareni pisac i poeta koji je
+                                    posedovao bogatu biblioteku u kojoj je i Nikola provodio svoje detinjstvo čitajući i
+                                    učeći strane jezike. Po jednom verovanju, Tesle vode poreklo od Draganića iz
+                                    Banjana. Po navodima Jovana Dučića, Tesle su poreklom iz Stare Hercegovine, od plemena
+                                    (Oputni) Rudinjani iz sela Pilatovaca u današnjoj nikšićkoj opštini. Međutim, o
+                                    Teslinom poreklu postoji i verzija da su od Komnenovića iz Banjana u Staroj
+                                    Hercegovini. Po legendi koja se zadržala u Banjanima, Komnenovići su zidali crkvu
+                                    prilikom čega su se posvađali sa majstorima usled čega je došlo do krvavih obračuna.
+                                    Kao rezultat toga, deo Komnenovića se preselio sa Tupana u drugi kraj Banjana zbog čega
+                                    su ih prozvali Čivije (ekseri) koji i danas žive u Banjanima, dok se drugi deo odselio
+                                    u Liku koji je prozvan Tesla po tesli, vrsti tesarskog alata. </p>
+                                <p>Nikolina majka bila je vredna žena s mnogo talenata. Bila je vrlo kreativna i svojim
+                                    izumima olakšavala je život na selu. Smatra se da je Nikola Tesla upravo od majke
+                                    nasledio sklonost ka istraživačkom radu. Teslini roditelji su, osim njega, imali sina
+                                    Daneta i kćerke Angelinu i Milku, koje su bile starije od Nikole, i Maricu, najmlađe
+                                    dete u porodici Tesla. Dane je poginuo pri padu s konja kad je Nikola imao pet godina i
+                                    to je ostavilo veliki trag u porodici. Dane je smatran izuzetno obdarenim, dok se za
+                                    Nikolu verovalo da je manje inteligentan. Veruje se da je Danetova smrt osnovni razlog
+                                    što otac dugo nije pristajao da mu dozvoli da pohađa tehničku školu daleko od kuće.</p>
+                                <h3>Školovanje</h3>
+                                <p>Prvi razred osnovne škole pohađao je u rodnom Smiljanu. Otac Milutin rukopoložen je za
+                                    protu u Gospiću, te se porodica preselila u ovo mesto 1862. godine. Preostala tri
+                                    razreda osnovne škole i trogodišnju Nižu realnu gimnaziju završio je u Gospiću.
+                                    U Gospiću je Nikola prvi put skrenuo pažnju na sebe kada je jedan trgovac organizovao
+                                    vatrogasnu službu. Na pokaznoj vežbi kojoj je prisustvovalo mnoštvo Gospićana,
+                                    vatrogasci nisu uspeli da ispumpaju vodu iz reke Like. Stručnjaci su pokušali da
+                                    otkriju razlog zašto pumpa ne vuče vodu, ali bezuspešno. Tesla, koji je tada imao sedam
+                                    ili osam godina, je instiktivno rešio problem ušavši u reku i otčepivši drugi kraj
+                                    creva. Zbog toga je slavljen kao heroj dana.
+                                    Teško se razboleo na kraju trećeg razreda škole 1870. godine. S jeseni je otišao u
+                                    Rakovac kraj Karlovca da završi još tri razreda Velike realke. Maturirao je 24. jula
+                                    1873. godine u grupi od svega sedam učenika sa vrlo dobrim uspehom jer je iz nacrtne
+                                    geometrije bio dovoljan. Tada je imao 17 godina. Nakon završene mature vratio se u
+                                    Gospić i već prvi dan razboleo od kolere. Bolovao je devet meseci. U tim okolnostima
+                                    uspeo je da ubedi oca da mu obeća da će ga umesto na bogosloviju upisati na studije
+                                    tehnike.</p>
+                                <h3>Studije</h3>
+                                <p>Pošto je ozdravio, otac ga šalje ujaku proti Tomi Mandiću, u Tomingaj kod Gračca, da
+                                    boravkom na selu i planini prikuplja snagu za napore koji ga očekuju. Na studije
+                                    elektrotehnike kreće 1875. godine, dve godine nakon mature. Upisuje se u Politehničku
+                                    školu u Gracu, u južnoj Štajerskoj (danas Austrija). Tada mu je bilo 19 godina.
+    
+                                    Spava veoma malo, svega četiri sata dnevno i sve slobodno vreme provodi u učenju.
+                                    Ispite polaže sa najvišim ocenama. Još tada ga je zainteresovala mogućnost primene
+                                    naizmenične struje. Čita sve što mu dođe pod ruku (100 tomova Volterovih spisa). Nikola
+                                    je o sebi pisao: „Pročitao sam mnogo knjiga, a sa 24 godine sam mnoge znao i napamet.
+                                    Posebno Geteovog Fausta.” Zabrinuti za njegovo zdravlje, profesori šalju pisma njegovom
+                                    ocu u kojima ga savetuju da ispiše sina ukoliko ne želi da se ubije prekomernim radom.</p>
+    
+                                <p>Nakon prve godine studija izostaje stipendija Carsko-kraljevske general-komande (kojom
+                                    su pomagani siromašni učenici iz Vojne krajine). Dva puta se za stipendiju obraća
+                                    slavnoj Matici srpskoj u Novom Sadu. Prvi put 14. oktobra 1876, a drugi put 1.
+                                    septembra 1878. godine. Oba puta biva odbijen. U decembru 1878. godine napušta Grac i
+                                    prekida sve veze sa bližnjima. Drugovi su mislili da se utopio u Muri. Odlazi u Marburg
+                                    (današnji Maribor) gde dobija posao kod nekog inženjera. Odaje se kockanju. Otac ga
+                                    nakon višemesečne bezuspešne potrage pronalazi i vraća kući. Otac, uzoran čovek, nije
+                                    mogao da nađe opravdanje za takvo ponašanje. (Nedugo potom otac umire 30. aprila 1879.
+                                    godine). Nikola je te godine jedno vreme radio u gospićkoj realnoj gimnaziji.
+    
+                                    Januara 1880. godine, odlazi u Prag da prema očevoj želji okonča studije. Tamo ne može
+                                    da se upiše na Karlov univerzitet jer u srednjoj školi nije učio grčki. Najverovatnije
+                                    je slušao predavanja iz fizike i elektrotehnike. Živeo je na adresi Ve Smečkah 13, gde
+                                    je 2011. godine postavljena memorijalna tabla. Većinu vremena provodio je bibliotekama
+                                    u Klementinumu i narodnoj kavarni u Vodičkovoj ulici.
+    
+                                    Naredne godine, svestan da njegovi bližnji podnose ogromnu žrtvu zbog njega, rešava da
+                                    ih oslobodi tog tereta i napušta studije.</p>
+                                <p>BRIŠI
+                                    Tesla je naveo u svojoj autobiografiji kako je živo i plastično doživljavao momente
+                                    inspiracije. Od ranih dana je imao sposobnost da u mislima stvori preciznu sliku
+                                    pronalaska pre nego što ga napravi. Ova pojava se u psihologiji naziva „Vizuelno
+                                    razmišljanje”.</p>
+    
+                                <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega u
+                                    oblasti
+                                    elektrotehnike 112.</p>
+                            </div>
+                            <div class="tab-pane fade border" id="list-srGod" role="tabpanel" aria-labelledby="list-srGod-list">
+    
+                            </div>
+                            <div class="tab-pane fade border" id="list-zlGod" role="tabpanel" aria-labelledby="list-zlGod-list">
+    
+                            </div>
+                            <div class="tab-pane fade border" id="list-pozGod" role="tabpanel" aria-labelledby="list-pozGod-list">
+    
+                            </div>
+    
+                            <div class="tab-pane fade" id="list-ratStruja" role="tabpanel" aria-labelledby="list-ratStruja-list">
+                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
+                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
+    
+                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja je
+                                    bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna prava.
+                                    Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su bile
+                                    glavno opterećenje tokom dana.</p>
+    
+                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju, prenos
+                                    i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
+                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline patente
+                                    polifaznog sistema i druge patente za transformator od Lisijena Galarda i Džona Diksona
+                                    Gibsa.</p>
+                            </div>
+                            <div class="tab-pane fade" id="list-teslaDrustvo" role="tabpanel" aria-labelledby="list-teslaDrustvo-list">
+                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
+                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
+    
+                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja je
+                                    bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna prava.
+                                    Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su bile
+                                    glavno opterećenje tokom dana.</p>
+    
+                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju, prenos
+                                    i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
+                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline patente
+                                    polifaznog sistema i druge patente za transformator od Lisijena Galarda i Džona Diksona
+                                    Gibsa.</p>
+    
+                            </div>
+                            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
+                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
+    
+                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja je
+                                    bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna prava.
+                                    Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su bile
+                                    glavno opterećenje tokom dana.</p>
+    
+                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju, prenos
+                                    i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
+                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline patente
+                                    polifaznog sistema i druge patente za transformator od Lisijena Galarda i Džona Diksona
+                                    Gibsa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">ASIDE</div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <p>footer</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
 </body>
+
 </html>
