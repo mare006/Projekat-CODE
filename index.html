@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tesla Bio</title>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/Favicon.jpg" type="image/x-icon">
 </head>
@@ -20,727 +21,992 @@
     </header>
     <!-- main section -->
     <main>
-
-        <!-- content+nav+aside -->
-
-        <!-- main-nav-list-group -->
-        <div class="mainNavListGroup">
-            <div class="container">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="list-group" id="list-tab" role="tablist">
-                            <!-- na draju klase active -->
-                            <a class="list-group-item list-group-item-action" id="list-bio-list" data-toggle="list"
-                                href="#list-bio" role="tab" aria-controls="bio">BIOGRAFIJA </a>
-
-                            <a class="list-group-item list-group-item-action" id="list-raneGod-list" data-toggle="list"
-                                href="#list-raneGod" role="tab" aria-controls="raneGod">Rođenje i rane godine</a>
-                            <a class="list-group-item list-group-item-action" id="list-srGod-list" data-toggle="list"
-                                href="#list-srGod" role="tab" aria-controls="srGod">Srednje godine</a>
-                            <a class="list-group-item list-group-item-action" id="list-zlGod-list" data-toggle="list"
-                                href="#list-zlGod" role="tab" aria-controls="zlGod">Zlatne godine stvaralaštva</a>
-                            <a class="list-group-item list-group-item-action" id="list-pozGod-list" data-toggle="list"
-                                href="#list-pozGod" role="tab" aria-controls="pozGod">Pozne godine i smrt</a>
-
-                            <a class="list-group-item list-group-item-action" id="list-ratStruja-list" data-toggle="list"
-                                href="#list-ratStruja" role="tab" aria-controls="ratStruja">RAT STRUJA</a>
-
-                            <a class="list-group-item list-group-item-action" id="list-teslaDrustvo-list" data-toggle="list"
-                                href="#list-teslaDrustvo" role="tab" aria-controls="teslaDrustvo">TESLA I DRUŠTVO</a>
-
-                            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                                href="#list-settings" role="tab" aria-controls="settings">PRONALASCI I NAGRADE</a>
+        <!-- main div all content -->
+        <div id="mainDiv">
+            <!-- menu left -->
+            <div id="menuHolder">
+                <div id="leftContentMenu" class="noSelect">
+                    <div class="mainBtn" id="Bio">
+                        <p>BIOGRAFIJA</p>
+                    </div>
+                    <div id="subBtns">
+                        <div class="subBtn" id="BioRaneGod">
+                            <p>Rođenje i rane godine</p>
+                        </div>
+                        <div class="subBtn" id="BioSrGod">
+                            <p>Srednje godine</p>
+                        </div>
+                        <div class="subBtn" id="BioZlGod">
+                            <p>Zlatne godine stvaralaštva</p>
+                        </div>
+                        <div class="subBtn" id="BioPozGod">
+                            <p>Pozne godine i smrt</p>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="tab-content" id="nav-tabContent">
-                            <!-- na kraju klase show active -->
-                            <div class="tab-pane fade border" id="list-bio" role="tabpanel" aria-labelledby="list-bio-list">
-
-                                <h3>Ukratko</h3>
-
-                                <p>Nikola Tesla (10. jul 1856 — 7. januar 1943) bio je jedan od najpoznatijih srpskih i
-                                    svetskih pronalazača i naučnika u oblasti fizike, elektrotehnike i radiotehnike.</p>
-
-                                <p>Najznačajniji Teslini pronalasci su polifazni sistem, obrtno magnetsko polje,
-                                    asinhroni motor, sinhroni motor i Teslin transformator. Takođe, otkrio je jedan od
-                                    načina za generisanje visokofrekventne struje, dao je značajan doprinos u prenosu i
-                                    modulaciji radio-signala, a ostali su zapaženi i njegovi radovi u oblasti
-                                    rendgenskih zraka.</p>
-
-                                <p>Njegov sistem naizmeničnih struja je omogućio znatno lakši i efikasniji prenos
-                                    električne energije na daljinu. Bio je ključni čovek u izgradnji prve hidrocentrale
-                                    na Nijagarinim vodopadima.</p>
-
-                                <p>Preminuo je u svojoj 87. godini, siromašan i zaboravljen.</p>
-
-                                <p>Jedini je Srbin po kome je nazvana jedna međunarodna jedinica mere, jedinica mere za
-                                    gustinu magnetnog fluksa ili jačinu magnetnog polja — tesla.</p>
-
-                                <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega u
-                                    oblasti elektrotehnike 112.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-raneGod" role="tabpanel" aria-labelledby="list-raneGod-list">
-
-                                <h3>Rođenje, detinjstvo, porodica</h3>
-
-                                <p>Nikola je rođen 10. jula u Smiljanu u Lici, kao četvrto dete od petoro dece
-                                    Milutina, srpskog pravoslavnog sveštenika, i majke Georgine, u Vojnoj krajini
-                                    Austrijskog carstva nedaleko od granice sa Osmanskim carstvom. Kršten je u srpskoj
-                                    pravoslavnoj Crkvi Sv. Petra i Pavla u Smiljanu. Ime Nikola je dobio po jednom i
-                                    drugom dedi. Dete je bilo bolešljivo i slabo pa su krštenje zakazali mimo običaja,
-                                    sutradan, bojeći se da neće preživeti. Krštenje deteta obavio je pop Toma
-                                    Oklopdžija u crkvi Svetog Petra i Pavla u Smiljanu, a kum je bio Milutinov
-                                    prijatelj, kapetan Jovan Drenovac. U crkvenim knjigama je zapisano crkvenoslovenski
-                                    da je dete dobilo ime Nikolaj, a zapravo je dobilo ime po jednom i drugom dedi
-                                    Nikola. Nikolin otac je bio nadareni pisac i poeta koji je posedovao bogatu
-                                    biblioteku u kojoj je i Nikola provodio svoje detinjstvo čitajući i učeći strane
-                                    jezike. Po jednom verovanju, Tesle vode poreklo od Draganića iz Banjana. Po
-                                    navodima Jovana Dučića, Tesle su poreklom iz Stare Hercegovine, od plemena (Oputni)
-                                    Rudinjani iz sela Pilatovaca u današnjoj nikšićkoj opštini. Međutim, o Teslinom
-                                    poreklu postoji i verzija da su od Komnenovića iz Banjana u Staroj Hercegovini. Po
-                                    legendi koja se zadržala u Banjanima, Komnenovići su zidali crkvu prilikom čega su
-                                    se posvađali sa majstorima usled čega je došlo do krvavih obračuna. Kao rezultat
-                                    toga, deo Komnenovića se preselio sa Tupana u drugi kraj Banjana zbog čega su ih
-                                    prozvali Čivije (ekseri) koji i danas žive u Banjanima, dok se drugi deo odselio u
-                                    Liku koji je prozvan Tesla po tesli, vrsti tesarskog alata.</p>
-
-                                <p>Nikolina majka bila je vredna žena s mnogo talenata. Bila je vrlo kreativna i svojim
-                                    izumima olakšavala je život na selu. Smatra se da je Nikola Tesla upravo od majke
-                                    nasledio sklonost ka istraživačkom radu. Teslini roditelji su, osim njega, imali
-                                    sina Daneta i kćerke Angelinu i Milku, koje su bile starije od Nikole, i Maricu,
-                                    najmlađe dete u porodici Tesla. Dane je poginuo pri padu s konja kad je Nikola imao
-                                    pet godina i to je ostavilo veliki trag u porodici. Dane je smatran izuzetno
-                                    obdarenim, dok se za Nikolu verovalo da je manje inteligentan. Veruje se da je
-                                    Danetova smrt osnovni razlog što otac dugo nije pristajao da mu dozvoli da pohađa
-                                    tehničku školu daleko od kuće.</p>
-
-                                <h3>Školovanje</h3>
-
-                                <p>Prvi razred osnovne škole pohađao je u rodnom Smiljanu. Otac Milutin rukopoložen je
-                                    za protu u Gospiću, te se porodica preselila u ovo mesto 1862. godine. Preostala
-                                    tri razreda osnovne škole i trogodišnju Nižu realnu gimnaziju završio je u Gospiću.
-                                    U Gospiću je Nikola prvi put skrenuo pažnju na sebe kada je jedan trgovac
-                                    organizovao vatrogasnu službu. Na pokaznoj vežbi kojoj je prisustvovalo mnoštvo
-                                    Gospićana, vatrogasci nisu uspeli da ispumpaju vodu iz reke Like. Stručnjaci su
-                                    pokušali da otkriju razlog zašto pumpa ne vuče vodu, ali bezuspešno. Tesla, koji je
-                                    tada imao sedam ili osam godina, je instiktivno rešio problem ušavši u reku i
-                                    otčepivši drugi kraj creva. Zbog toga je slavljen kao heroj dana. Teško se razboleo
-                                    na kraju trećeg razreda škole 1870. godine. S jeseni je otišao u Rakovac kraj
-                                    Karlovca da završi još tri razreda Velike realke. Maturirao je 24. jula 1873.
-                                    godine u grupi od svega sedam učenika sa vrlo dobrim uspehom jer je iz nacrtne
-                                    geometrije bio dovoljan. Tada je imao 17 godina. Nakon završene mature vratio se u
-                                    Gospić i već prvi dan razboleo od kolere. Bolovao je devet meseci. U tim
-                                    okolnostima uspeo je da ubedi oca da mu obeća da će ga umesto na bogosloviju
-                                    upisati na studije tehnike.</p>
-
-                                <h3>Studije</h3>
-
-                                <p>Pošto je ozdravio, otac ga šalje ujaku proti Tomi Mandiću, u Tomingaj kod Gračca, da
-                                    boravkom na selu i planini prikuplja snagu za napore koji ga očekuju. Na studije
-                                    elektrotehnike kreće 1875. godine, dve godine nakon mature. Upisuje se u
-                                    Politehničku školu u Gracu, u južnoj Štajerskoj (danas Austrija). Tada mu je bilo
-                                    19 godina.</p>
-
-                                <p>Spava veoma malo, svega četiri sata dnevno i sve slobodno vreme provodi u učenju.
-                                    Ispite polaže sa najvišim ocenama. Još tada ga je zainteresovala mogućnost primene
-                                    naizmenične struje. Čita sve što mu dođe pod ruku (100 tomova Volterovih spisa).
-                                    Nikola je o sebi pisao: „Pročitao sam mnogo knjiga, a sa 24 godine sam mnoge znao i
-                                    napamet. Posebno Geteovog Fausta.” Zabrinuti za njegovo zdravlje, profesori šalju
-                                    pisma njegovom ocu u kojima ga savetuju da ispiše sina ukoliko ne želi da se ubije
-                                    prekomernim radom.</p>
-
-                                <p>Nakon prve godine studija izostaje stipendija Carsko-kraljevske general-komande
-                                    (kojom su pomagani siromašni učenici iz Vojne krajine). Dva puta se za stipendiju
-                                    obraća slavnoj Matici srpskoj u Novom Sadu. Prvi put 14. oktobra 1876, a drugi put
-                                    1. septembra 1878. godine. Oba puta biva odbijen. U decembru 1878. godine napušta
-                                    Grac i prekida sve veze sa bližnjima. Drugovi su mislili da se utopio u Muri.
-                                    Odlazi u Marburg (današnji Maribor) gde dobija posao kod nekog inženjera. Odaje se
-                                    kockanju. Otac ga nakon višemesečne bezuspešne potrage pronalazi i vraća kući.
-                                    Otac, uzoran čovek, nije mogao da nađe opravdanje za takvo ponašanje. (Nedugo potom
-                                    otac umire 30. aprila 1879. godine). Nikola je te godine jedno vreme radio u
-                                    gospićkoj realnoj gimnaziji.</p>
-
-                                <p>Januara 1880. godine, odlazi u Prag da prema očevoj želji okonča studije. Tamo ne
-                                    može da se upiše na Karlov univerzitet jer u srednjoj školi nije učio grčki.
-                                    Najverovatnije je slušao predavanja iz fizike i elektrotehnike. Živeo je na adresi
-                                    Ve Smečkah 13, gde je 2011. godine postavljena memorijalna tabla. Većinu vremena
-                                    provodio je bibliotekama u Klementinumu i narodnoj kavarni u Vodičkovoj ulici.</p>
-
-                                <p>Naredne godine, svestan da njegovi bližnji podnose ogromnu žrtvu zbog njega, rešava
-                                    da ih oslobodi tog tereta i napušta studije.</p>
-
-                                <p>Tesla je naveo u svojoj autobiografiji kako je živo i plastično doživljavao momente
-                                    inspiracije. Od ranih dana je imao sposobnost da u mislima stvori preciznu sliku
-                                    pronalaska pre nego što ga napravi. Ova pojava se u psihologiji naziva „Vizuelno
-                                    razmišljanje”.</p>
-
-                                <h3>Prvi poslovi</h3>
-
-                                <p>Godine 1881. se seli u Budimpeštu gde se zapošljava u telegrafskoj kompaniji pod
-                                    nazivom „Američka Telefonska Kompanija”. Tesla je pri otvaranju telefonske centrale
-                                    1881. godine postao glavni telefonijski tehničar u kompaniji. Tu je izmislio uređaj
-                                    koji je, prema nekima, telefonski pojačavač, dok je prema drugima prvi zvučnik. U
-                                    Budimpeštanskom parku se Tesli javila ideja o rešenju problema motora na
-                                    naizmeničnu struju bez komutatora, dok je šetao sa prijateljem i recitovao Geteovog
-                                    „Fausta”, a onda iznenada počeo štapom po pesku da crta linije sila obrtnog
-                                    magnetskog polja. Za dva naredna meseca je razradio skice mnogih tipova motora i
-                                    modifikacija koje će pet godina kasnije patentirati u Americi.</p>
-
-                                <h3>Tesla i Edison</h3>
-
-                                <p>U Pariz se seli 1882. godine gde radi kao inženjer za Edisonovu kompaniju na
-                                    poslovima unapređenja električne opreme. Godine 1883. trebalo je da kompanija u
-                                    Štrazburgu (današnji Strazbur) osposobi jednosmernu centralu jer se na otvaranju
-                                    očekivao nemački car lično. Tesli je dat ovaj zadatak i on je boravio u Strazburu
-                                    od 14. oktobra 1883. do 24. februara 1884. godine.Tesla ovde potpisuje prvi
-                                    poslovni ugovor u vezi realizacije prvog indukcionog motora, tako je krajem 1883.
-                                    godine u Strazburu nastao prvi indukcioni motor koji koristi princip obrtnog
-                                    magnetskog polja naizmeničnih struja. Počeo je i sa razvojem raznih vrsta
-                                    polifaznih sistema i uređaja sa obrtnim magnetskim poljem (za koje mu je odobren
-                                    patent 1888. godine).</p>
-
-                                <p>Tesla je, 6. juna 1884. godine, došao u Ameriku u Njujork sa pismom preporuke koje
-                                    je dobio od prethodnog šefa Čarlsa Bečelora. U preporuci je Bečelor napisao: „Ja
-                                    poznajem dva velika čoveka, a vi ste jedan od njih; drugi je ovaj mladi čovek”.
-                                    Edison je zaposlio Teslu u svojoj kompaniji Edisonove mašine. Tesla je ubrzo
-                                    napredovao i uspešno rešavao i najkomplikovanije probleme u kompaniji. Tesli je
-                                    ponuđeno da uradi potpuno reprojektovanje generatora jednosmerne struje Edisonove
-                                    kompanije.</p>
-
-                                <p>Pošto je Tesla opisao prirodu dobitaka od njegove nove konstrukcije, Edison mu je
-                                    ponudio 50.000$ (1,1 milion $ danas) kad sve bude uspešno završeno i napravljeno.
-                                    Tesla je radio blizu godinu dana na novim konstrukcijama i Edisonovoj kompaniji
-                                    doneo nekoliko patenata koji su potom zaradili neverovatan profit. Kada je potom
-                                    Tesla pitao Edisona o obećanih 50.000$, Edison mu je odgovorio „Tesla, vi ne
-                                    razumete naš američki smisao za humor”. i pogazio svoje obećanje. Edison je pristao
-                                    da poveća Teslinu platu za 10$ nedeljno, kao vrstu kompromisa, što znači da bi
-                                    trebalo da radi 53 godine da zaradi novac koji mu je bio prvobitno obećan. Tesla je
-                                    dao otkaz momentalno.</p>
-
-                                <p>Edison je kao dobar biznismen zarađivao novac korišćenjem svojih jednosmernih
-                                    generatora struje koji su bili veoma skupi za postavljanje i održavanje. Bilo je
-                                    potrebno i po nekoliko stanica jednosmerne struje da bi se obezbedila jedna gradska
-                                    četvrt, dok je Teslin generator naizmenične struje bio dovoljan za snabdevanje
-                                    kompletnog grada. Uvidevši efikasnost Teslinih patenata, Edison je koristio razne
-                                    načine da uveri javnost kako je ta struja opasna, hodao je po gradskim vašarima i
-                                    pred medijima naizmeničnom strujom usmrćivao životinje (pse, mačke, i u jednom
-                                    slučaju, slona). Na njegovu ideju stvorena je i prva električna stolica. Kao
-                                    odgovor tome Tesla se priključio u kolo naizmenične struje što je prouzrokovalo
-                                    užarenje niti električne sijalice, i tim pobio predrasude štetnosti naizmenične
-                                    struje</p>
-                            </div>
-                            <div class="tab-pane fade border" id="list-srGod" role="tabpanel" aria-labelledby="list-srGod-list">
-
-                                <h3>Prvi patenti iz naizmeničnih struja</h3>
-
-                                <p>Godine 1886. Tesla u Njujorku osniva svoju kompaniju, Tesla električno osvetljenje i
-                                    proizvodnja (Tesla Electric Light & Manufacturing). Prvobitni osnivači se nisu
-                                    složili sa Teslom oko njegovih planova za uvođenje motora na naizmeničnu struju i
-                                    na kraju je ostao bez finansijera i kompanije. Tesla je potom radio u Njujorku kao
-                                    običan radnik od 1886. do 1887. godine da bi se prehranio i skupio novac za svoj
-                                    novi poduhvat. Prvi elektromotor na naizmeničnu struju bez četkica je uspeo da
-                                    konstruiše 1887. godine, i demonstrirao ga pred „Američkim društvom
-                                    elektroinženjera” (American Institute of Electrical Engineers, danas IEEE) 1888.
-                                    godine. Iste godine je razvio principe svog Teslinog kalema i počeo rad sa Džordžom
-                                    Vestinghausom u laboratorijama njegove firme „Vestinghaus električna i proizvodna
-                                    kompanija” (Westinghouse Electric & Manufacturing Company). Vestinghaus ga je
-                                    poslušao u vezi njegovih ideja o višefaznim sistemima koji bi omogućili prenos
-                                    naizmenične struje na velika rastojanja.</p>
-
-                                <h3>Eksperimenti sa Iks-zracima</h3>
-
-                                <p>Aprila 1887. godine Tesla počinje istraživanje onoga što će kasnije biti nazvano
-                                    Iks-zracima koristeći vakuumsku cev sa jednim kolenom (sličnu njegovom patentu
-                                    514170). Ovaj uređaj je drugačiji od drugih ranih cevi za Iks-zrake jer nije imao
-                                    elektrodu-metu. Savremen izraz za fenomen koji je razlog ovakvog dejstva uređaja je
-                                    „probojno zračenje”. Do 1892. godine je Tesla već bio upoznat sa radom Vilhelma
-                                    Rendgena i njegovim pronalaskom efekata Iks-zraka.</p>
-
-                                <p>Tesla nije priznavao postojanje opasnosti od rada sa Iks-zracima, pripisujući
-                                    oštećenja na koži ozonu pre nego, do tada nepoznatom zračenju: „U vezi štetnih
-                                    dejstava na kožu… primećujem da su ona pogrešno tumačena… ona nisu od Rendgenovih
-                                    zraka, već jedino od ozona stvorenog u kontaktu sa kožom. Azotna kiselina bi takođe
-                                    mogla biti odgovorna, ali u manjoj meri”. (Tesla, Electrical Review, 30. novembar
-                                    1895.) Ovo je pogrešna ocena što se tiče katodnih cevi sa Iks-zračenjem. Tesla je
-                                    kasnije primetio opekotine kod asistenta koje potiču od Iks-zraka i stoga je vršio
-                                    eksperimente. Fotografisao je svoju ruku i fotografiju je poslao Rendgenu, ali nije
-                                    javno objavio svoj rad i pronalaske. Ovaj deo istraživanja je propao u požaru u
-                                    laboratoriji u ulici Hjuston 1895. godine.</p>
-
-                                <h3>Državljanstvo i laboratorija u ulici Hauston</h3>
-
-                                <p>Američko državljanstvo dobija 30. jula 1891, sa 35 godina, a tada započinje rad u
-                                    svojoj novoj laboratoriji u ulici Hauston u Njujorku. Tu je prvi put prikazao
-                                    fluorescentnu sijalicu koja svetli bez žica. Tako se prvi put pojavila ideja o
-                                    bežičnom prenosu snage. Sa 36 godina prijavljuje prvi patent iz oblasti višefaznih
-                                    struja. U nastavku istraživanja se posvećuje principima obrtnih magnetnih polja.
-                                    Postaje potpredsednik Američkog instituta elektroinženjera (kasnije IEEE) u periodu
-                                    od 1892. do 1894. godine.</p>
-
-                                <h3>Put u Evropu i smrt majke</h3>
-
-                                <p>Tesla 1892. godine putuje u Evropu, gde prvo drži 3. februara senzacionalno
-                                    predavanje u Londonu u Britanskom institutu elektroinženjera „Eksperimenti sa
-                                    naizmeničnim strujama visokog potencijala i visoke frekvencije”. Potom u Parizu 19.
-                                    februara članovima društva inženjera drži isto predavanje i ostaje mesec dana
-                                    pokušavajući, po drugi put, da u Parizu nađe investitore za svoj novi polifazni
-                                    sistem struja.</p>
-
-                                <p>Tu ga zatiče telegram sa vešću da mu je majka na samrti. Žurno napušta Pariz da bi
-                                    boravio uz svoju umiruću majku i stiže 15. aprila, par sati pre smrti. Njene
-                                    poslednje reči su bile: „Stigao si Nidžo, ponose moj.” Posle njene smrti Tesla se
-                                    razboleo. Proveo je tri nedelje oporavljajući se u Gospiću i selu Tomingaj kod
-                                    Gračca, rodnom mestu njegove majke i manastiru Gomirje u kome je arhimandrit bio
-                                    njegov ujak Nikolaj.</p>
-
-                                <h3>Prvi i jedini boravak Nikole Tesle u Beogradu</h3>
-
-                                <p>Jedini boravak Tesle u Beogradu bio je od 1. — 3. juna 1892. godine. Došao je
-                                    na poziv Đorđa Stanojevića u Beograd 1. juna. Sledećeg dana je primljen u
-                                    audijenciju kod kralja Aleksandra Obrenovića kojom prilikom je odlikovan ordenom
-                                    Svetog Save. Potom je Tesla održao čuveni pozdravni govor u današnjoj zgradi
-                                    rektorata, studentima i profesorima beogradske Velike škole.</p>
-
-                                <p><i>„Ja sam, kao što vidite i čujete ostao Srbin i preko mora, gde se ispitivanjima
-                                        bavim. To isto treba da budete i vi i da svojim znanjem i radom podižete slavu
-                                        Srpstva u svetu.”</i> — početak Teslinog govora u Velikoj školi</p>
-
-                                <p>Teslin boravak u Beogradu je ostavio dubokog traga, međutim, iako je dobio 12.
-                                    septembra priznanje engleskog udruženja inženjera i naučnika, ubrzo i počasnu
-                                    titulu doktora Univerziteta Kolumbija, krajem 1892. godine nije prošao na izboru za
-                                    redovnog člana Srpske kraljevske akademije. Za dopisnog člana izabran je 1894. a za
-                                    redovnog 1937. godine.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-zlGod" role="tabpanel" aria-labelledby="list-zlGod-list">
-
-                                <h3>Prvih milion volti</h3>
-
-                                <p>Od 1893. do 1895. godine Tesla istražuje naizmenične struje visokih frekvencija.
-                                    Uspeva da proizvede naizmeničnu struju napona od milion volti koristeći Teslin
-                                    kalem i proučavao je površinski efekat visokih frekvencija u provodnim
-                                    materijalima, bavio se sinhronizacijom električnih kola i rezonatorima, lampom sa
-                                    razređenim gasom koja svetli bez žica, bežičnim prenosom električne energije i
-                                    prvim prenosom radio-talasa. U Sent Luisu je 1893. godine, pred 6000 gledalaca,
-                                    Tesla prikazao na atraktivan način mnoge eksperimente uključujući i prenos sličan
-                                    radio komunikaciji. Obraćajući se Frenklinovom institutu u Filadelfiji i
-                                    Nacionalnoj asocijaciji za električno osvetljenje on je opisao i demonstrirao svoje
-                                    principe detaljno. Tesline demonstracije izazivaju veliku pažnju i pomno se prate.</p>
-
-                                <h3>Svetska izložba u Čikagu</h3>
-
-                                <p>Svetska izložba 1893. godine u Čikagu, Svetska Kolumbovska izložba, je bila
-                                    međunarodna izložba na kojoj je po prvi put ceo salon izdvojen samo za električna
-                                    dostignuća. To je bio istorijski događaj jer su Tesla i Vestinghaus predstavili
-                                    posetiocima svoj sistem naizmenične struje osvetljavajući celu izložbu.
-                                    Prikazane su Tesline fluorescentne sijalice i sijalice sa jednim izvodom. Tesla je
-                                    objasnio princip obrtnog magnetskog polja i indukcionog motora izazivajući
-                                    divljenje pri demonstraciji obrtanja bakarnog jajeta i postavljanja na vrh, što je
-                                    predstavljeno kao Kolumbovo jaje. To je korišćeno da se objasni i prikaže model
-                                    obrtnog magnetskog polja i induktivnog motora.</p>
-
-                                <h3>Priznanja, nedaće i rat struja</h3>
-
-                                <p>Februara 1894. se pojavljuje prva knjiga o Tesli, „Otkrića, istraživanja i pisani
-                                    radovi Nikole Tesle”. Ubrzo knjiga biva prevedena na srpski i nemački jezik.</p>
-
-                                <p>Veliki udarac za istraživanja se desio 13. marta 1895. godine kada izbija veliki
-                                    požar u laboratoriji u Južnoj petoj aveniji broj 35 kojom prilikom je izgorelo oko
-                                    400 električnih motora, električni i mehanički oscilatori, transformatori, mnoge
-                                    originalne konstrukcije i rukopis skoro završene knjige „Priča o 1001 indukcionom
-                                    motoru”. Međutim, to je bilo vreme izuzetne Tesline kreativnosti i žilavosti.
-                                    Već 15. marta osniva kompaniju pod imenom „Nikola Tesla” i nastavlja rad.</p>
-
-                                <p>Kasnih 1880-ih, Tesla i Tomas Edison su postali protivnici, povodom Edisonovog
-                                    pokretanja sistema distribucije električne energije na osnovu jednosmerne struje
-                                    uprkos postojanja efikasnijeg, Teslinog, sistema sa naizmeničnom strujom. Kao
-                                    rezultat rata struja, Tomas Edison i Džordž Vestinghaus su zamalo bankrotirali, pa
-                                    je 1897. godine Tesla pocepao ugovor i oslobodio Vestinghausa obaveza plaćanja
-                                    korišćenja patenata. Te 1897. godine je Tesla radio ispitivanja koja su vodila ka
-                                    postavljanju osnova za istraživanja u oblasti kosmičkih zračenja.</p>
-
-                                <h3>Otkriće radija i bežičnog prenosa, svećice</h3>
-
-                                <p>Kada je napunio 41 godinu, podneo je svoj prvi patent br. 645576 iz oblasti radija.
-                                    Godinu dana kasnije američkoj vojsci prikazuje model radijski upravljanog broda,
-                                    verujući da vojska može biti zainteresovana za radio-kontrolisana torpeda. Tada je
-                                    on govorio o razvoju „umeća telematike”, vrste robotike. Radio kontrolisan brod je
-                                    javno prikazan 1898. godine na električnoj izložbi u Medison Skver Gardenu.
-                                    Samo godinu dana kasnije predstavio je u Čikagu brod koji je bio sposoban i da
-                                    zaroni. Ovi uređaji su imali inovativni rezonantni prijemnik i niz logičkih kola.
-                                    Radio-daljinsko upravljanje ostaje novotarija sve do Drugog svetskog rata. Iste
-                                    godine Tesla je izmislio električni upaljač ili svećicu za benzinske motore sa
-                                    unutrašnjim sagorevanjem, za šta mu je priznat patent 609250 pod nazivom
-                                    „Električni upaljač za benzinske motore”.</p>
-
-                                <h3>Kolorado Springs</h3>
-
-                                <p>Tesla je 1899. odlučio da se preseli i nastavi istraživanja u Koloradu Springsu, gde
-                                    je imao dovoljno prostora za svoje eksperimente sa visokim naponima i visokim
-                                    učestanostima. Po svom dolasku je novinarima izjavio da namerava da sprovede
-                                    eksperiment bežične telegrafije između Pajks Pika (vrh Stenovitih planina u
-                                    Koloradu) i Pariza. Teslini eksperimenti su ubrzo postali predmet urbanih legendi.
-                                    U svom dnevniku je opisao eksperimente koji se tiču jonosfere i zemaljskih talasa
-                                    izazvanih transferzalnim ili longitudinalnim talasima.</p>
-
-                                <p>Tesla je u svojoj laboratoriji dokazao da je Zemlja provodnik i vršeći pražnjenja od
-                                    više miliona volti proizvodio veštačke munje duge više desetina metara. Tesla je
-                                    takođe proučavao atmosferski elektricitet, posmatrajući pražnjenja svojim
-                                    prijemnicima. Reprodukujući njegove prijemnike i rezonantna kola mnogo godina
-                                    kasnije se uvideo nepredvidivi nivo kompleksnosti (raspodeljeni helikoidni
-                                    rezonator visokog faktora potiskivanja, radiofrekventno povratno kolo, kola sa
-                                    grubim heterodinim efektima i regenerativnim tehnikama). Tvrdio je čak da je
-                                    izmerio i postojanje stojećih talasa u Zemlji.</p>
-
-                                <p>U jednom momentu je utvrdio da je u svojoj laboratoriji zabeležio radio-signale
-                                    vanzemaljskog porekla. Naučna zajednica je odbacila njegovu objavu i njegove
-                                    podatke. On je tvrdio da svojim prijemnicima meri izvesne ponavljajuće signale koji
-                                    su suštinski drugačiji od signala koje je primetio kao posledica oluja i zemljinog
-                                    šuma. Kasnije je detaljno navodio da su signali dolazili u grupama od jednog, dva,
-                                    tri i četiri klika zajedno. Tesla je kasnije proveo deo života pokušavajući da
-                                    šalje signal na Mars.</p>
-
-                                <p>Tesla napušta Kolorado Springs 7. januara 1900, a laboratorija se ruši i rasprodaje
-                                    za isplatu duga. Međutim, eksperimenti u Kolorado Springsu su Teslu pripremili za
-                                    sledeći projekat, podizanje postrojenja za bežični prenos energije. U to vreme
-                                    prijavljuje patent u oblasti rezonantnih električnih oscilatornih kola.</p>
-
-                                <h3>Svetska radio stanica na Long Ajlandu</h3>
-
-                                <p>Tesla počinje planiranje Svetske radio-stanice — Vardenklif kule 1890. godine sa
-                                    150.000 $ (od kojih je 51 % ulaže Džej Pi Morgan). Gradnja počinje 1901. godine, a
-                                    januara 1902. godine ga zatiče vest da je Markoni uspeo da ostvari transatlantski
-                                    prenos signala. Juna 1902. je Tesla premestio laboratoriju iz ulice Hjuston u
-                                    Vardenklif. Velelepna kula Svetske radio-stanice još nije dovršena, a glavni
-                                    finansijer, Morgan, se novembra povlači iz poduhvata, dok su novine to propratile
-                                    natpisima Teslin Vardenklif je milionska ludorija. Godine 1906. Tesla napušta kulu
-                                    i vraća se u Njujork. Ta kula je tokom Prvog svetskog rata razmontirana, pod
-                                    izgovorom da može poslužiti nemačkim špijunima. Američki patentni zavod je 1904.
-                                    godine poništio prethodnu odluku i dodelio Đuljelmu Markoniju patent na radio, čak
-                                    je i Mihajlo Pupin stao na stranu Markonija. Od tada počinje Teslina borba za
-                                    povratak radio patenta.</p>
-
-                                <p>Na svoj 50. rođendan Tesla je priredio javno predstavljanje svoje turbine bez
-                                    lopatica snage 200 konjskih snaga (150 kW) sa 16.000 min−1 (obrtaja u minuti).
-                                    Tokom 1910—1911. su u Votersajd elektrane u Njujorku testirane Tesline turbine
-                                    snaga između 100 i 5000 konjskih snaga.</p>
-
-                                <p>Markoni 1909. godine dobija Nobelovu nagradu za otkriće radija, odnosno doprinos u
-                                    razvoju bežične telegrafije što čini Teslu duboko ogorčenim. Godine 1915. Tesla
-                                    podnosi tužbu protiv Markonija, tražeći sudsku zaštitu svojih prava na radio,
-                                    međutim već 1916. je bankrotirao zbog velikih troškova. U tim trenucima njegov
-                                    život opasno klizi ka ivici siromaštva.</p>
-
-                                <h3>Prvi svetski rat</h3>
-
-                                <p>Pred Prvi svetski rat Tesla je tražio investitore preko okeana. Kad je počeo rat,
-                                    Tesla je prestao da prima sredstva od svojih evropskih patenata. Nakon rata izneo
-                                    je svoja predviđanja u vezi s posleratnim okruženjem. U članku objavljenom 20.
-                                    decembra 1914. godine, Tesla je izneo mišljenje da Liga naroda nije rešenje za
-                                    tadašnje probleme.</p>
-
-                                <p>Mada bez materijalnih sredstava Tesli ipak stižu priznanja. Tako 18. maja 1917.
-                                    godine dobija zlatnu Edisonovu medalju za otkriće polifaznog sistema naizmeničnih
-                                    struja. Te večeri je izrečena misao da kada bi jednog momenta prestali da rade svi
-                                    Teslini pronalasci, industrija bi prestala da radi, tramvaji i vozovi bi stali,
-                                    gradovi bi ostali u mraku, a fabrike bi bile mrtve. Istorijski obrt je upravo u
-                                    tome što je Tesla dobio medalju sa imenom čoveka koji mu je bio ljuti protivnik sa
-                                    svojom idejom i izgubio u toj bici, ali je Edison na kraju stekao bogatstvo, a
-                                    Tesli je ostalo samo priznanje.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-pozGod" role="tabpanel" aria-labelledby="list-pozGod-list">
-
-                                <h3>Usamljenički život u starosti</h3>
-
-                                <p>Stanovao je 1927. godine Tesla na petnaestom spratu njujorškog hotela
-                                    „Pensilvanija”. Živeo je on samačkim životom u sobi broj 1522 E, vodeći pažljivo
-                                    naročitu brigu o svojoj ishrani. Na njegov sedamdeset peti rođendan 1931.
-                                    godine ga Tajm magazin stavlja na naslovnu stranu. U podnaslovu je naglašen njegov
-                                    doprinos sistemima proizvodnje električne energije. Tesli je odobren poslednji
-                                    patent 1928. godine u oblasti vazdušnog saobraćaja kada je predstavio prvu letelicu
-                                    sa vertikalnim poletanjem i sletanjem. Tesla 1934. godine piše jugoslovenskom
-                                    konzulu Jankoviću i zahvaljuje Mihajlu Pupinu na ideji da vodeće američke kompanije
-                                    formiraju fond kojim bi Tesli bila obezbeđena bezbrižna starost. Tesla odbija takvu
-                                    pomoć i bira da prima skromnu penziju od jugoslovenske vlade i bavi se
-                                    istraživanjima u skladu sa svojim mogućnostima. Poslednje godine života proveo je
-                                    hraneći golubove i živeo je uglavnom od godišnjeg honorara iz svoje domovine.</p>
-
-                                <p>U 81. godini Tesla izjavljuje da je kompletirao jedinstvenu teoriju polja. Tvrdio je
-                                    da je razradio sve detalje i da će ih otkriti svetu uskoro. Teorija nikad nije
-                                    objavljena, a naučna javnost je već bila ubeđena da se njegove izjave ne mogu
-                                    uzimati ozbiljno. Većina danas veruje da Tesla nikad nije u celosti razradio takvu
-                                    teoriju, a ono što je ostalo ima više istorijsku vrednost dok je u fizici potpuno
-                                    odbačeno. Tesla je bio nominovan za orden Svetog Save prvog reda, ali pošto je imao
-                                    američko državljanstvo nije ga dobio, ali je primio orden Svetog Save drugog reda.</p>
-
-                                <p>Jedno predveče 1937. tokom uobičajnog izlaska udario ga je taksi. Nikola Tesla je
-                                    pao na zemlju nepomičan, a onda je ustao i vratio se u hotel. Prema nekim izvorima
-                                    polomio je tri rebra, a prema drugima to su bile samo lakše povrede. Trebalo mu je
-                                    šest meseci da se oporavi.</p>
-
-                                <p>Godine 1939. na predlog svojih kolega iz kompanije Vestinghaus, vratio se na posao
-                                    za nedeljnu platu od 125 dolara.</p>
-
-                                <h3>Teslina smrt i epilog</h3>
-
-                                <p>Tesla umire od srčanog udara sam u hotelskom apartmanu 3327 na 33. spratu Njujorker
-                                    hotela 7. januara 1943. godine u 87. godini života. Zvanično je zabeleženo da
-                                    je umro od srčane tromboze, 7. januara 1943. godine u 22 časa i 30 minuta. I pored
-                                    prodaje patenata u oblasti naizmeničnih struja, Tesla umire siromašan i u dugovima.
-                                    Tim povodom, gradonačelnik Njujorka Lagvardija je rekao: „Nikola Tesla je umro.
-                                    Umro je siromašan, ali je bio jedan od najkorisnijih ljudi koji su ikada živeli.
-                                    Ono što je stvorio veliko je i, kako vreme prolazi, postaje još veće”. Posmrtni
-                                    obred je održan 12. januara u Crkvi Svetog Jovana Bogoslova na Menhetnu u Njujorku.
-                                    Posle službe telo je kremirano. Ispraćaju Teslinih posmrtnih ostataka prisustvovalo
-                                    je oko 2000 ljudi, među kojima su bile i mnoge značajne ličnosti i nobelovci. Svi
-                                    vodeći njujorški listovi imali su svoje izveštače.</p>
-
-                                <p>Na sahrani je svirao njegov prijatelj, violinista Zlatko Baloković, tada jedan od
-                                    najvećih virtuoza na svetu u pratnji slovenačkog hora Slovan, i to po Teslinoj
-                                    želji, prvo Šubertovu kompoziciju „Ave Marija”, a onda srpsku pesmu Tamo daleko.
-                                    Ostao je zabeležen i upečatljiv oproštajni govor tadašnjeg gradonačelnika Njujorka
-                                    Fjorela Henrija Lagvardije.</p>
-
-                                <p>Ubrzo po Teslinoj smrti FBI je zatražio od Useljeničke službe oduzimanje sve
-                                    pokojnikove lične stvari i dokumenata, iako je Tesla bio američki državljanin.
-                                    Kasnije je Ministarstvo odbrane kontaktiralo FBI, a Teslina dokumenta proglašena
-                                    vrhunskom tajnom. Sva Teslina lična imovina po nalogu Edgara Huvera i
-                                    predsednikovih savetnika dobila je etiketu „veoma poverljivo” zbog prirode Teslinih
-                                    otkrića i patenata.</p>
-
-                                <p>Kasnije 1943. godine Vrhovni sud SAD vratio je Tesli pravo na patent 645.576,
-                                    priznajući mu prvenstvo na patent radija.</p>
-
-                                <h3>Borba rodbine za ličnu imovinu</h3>
-
-                                <p>Teslina porodica i jugoslovenska ambasada su se borili sa američkim zvaničnicima za
-                                    povratak dokumenata i ličnih stvari, zbog mogućeg značaja nekog od njegovih
-                                    istraživanja. Konačno, njegov sestrić Sava Kosanović uspeva da dođe do dela
-                                    njegovih ličnih stvari i to je sada smešteno u Muzeju Nikole Tesle u Beogradu.</p>
-
-                                <p>Njegov pepeo je prenesen u Beograd jula 1957. godine. Urna je smeštena u Muzeju
-                                    Nikole Tesle gde i danas stoji.</p>
-
-                                <p>Dana 28. februara 2014. je potpisan sporazum između Srpske pravoslavne crkve, Vlade
-                                    Republike Srbije i Privremenog organa Grada Beograda o prenosu posmrtnih ostataka
-                                    Nikole Tesle u portu Hrama Svetog Save.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-ratStruja" role="tabpanel" aria-labelledby="list-ratStruja-list">
-
-                                <h3>Ukratko</h3>
-
-                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
-                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
-                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
-
-                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja
-                                    je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna
-                                    prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su
-                                    bile glavno opterećenje tokom dana.</p>
-
-                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju,
-                                    prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
-                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
-                                    patente polifaznog sistema i druge patente za transformator od Lisijena Galarda i
-                                    Džona Diksona Gibsa.</p>
-
-                                <h3>Električni prenosni sistem</h3>
-
-                                <p>Prenos električne energije posredstvom jednosmerne struje je imao nekoliko
-                                    ograničenja koji su rešeni upotrebom naizmenične struje. Velika opterećenja
-                                    jednosmernom strujom su teško mogla biti prenesena na razdaljine veće od jedne
-                                    milje bez velikih padova napona. Trožični prenosni sistem je obezbedio poboljšanje
-                                    što se tiče padova napona i veličini provodnika, ali nije rešio problem. Edisonov
-                                    odgovor na ograničenja jednosmernog sistema je bilo da se energija proizvodi blizu
-                                    područja gde se troši i da se postavi više žica da bi se rešio problem potražnje za
-                                    energijom, ali se rešenje pokazalo kao skupo, nepraktično i neizvodljivo.</p>
-
-                                <p>Jednosmerna struja se ne može lako tranformisati na više ili niže napone. To znači
-                                    da se odvojene električne linije moraju postaviti da bi se dostavila snaga
-                                    uređajima koji su koristili različite napone, na primer za osvetljenje i električne
-                                    motore. Ovo bi dovelo do velikog broja žica koje bi se trebale postaviti i
-                                    održavati, nepotrebno trošeći novac i uvodeći nepotrebne rizike. Velik broj smrti
-                                    tokom Velike mećave 1888. su bile pripisane prekinutim prenosnim linijama koje su
-                                    unele pometnju u gradove koji su koristili jednosmerne mreže.</p>
-
-                                <p>Visoki naizmenični naponi se mogu preneti preko velikih daljina sa malim padovima
-                                    napona (time povećavši efikasnost prenosa) i onda podesno spustiti na niže napone
-                                    za upotrebu u kućama i fabrikama. Kada je Tesla predstavio sistem generatora,
-                                    transformatora, motora, provodnika i osvetljenja za naizmeničnu struju u novembru i
-                                    decembru 1887, postalo je jasno da je naizmenična struja budućnost prenosa
-                                    električne energije.</p>
-
-                                <h3>Gubici tokom prenosa</h3>
-
-                                <p>Prednost naizmenične struje za distribuciju električne energije na velike
-                                    udaljenosti je laka promena napona posredstvom transformatora.</p>
-
-                                <p>Snaga je proizvod napona i struje (P=UI). Za datu snagu, nizak napon zahteva veliku
-                                    struju, a visoki napon malu struju. Međutim, pošto metalni provodnici imaju izvesnu
-                                    električnu otpornost, deo energije će se potrošiti na zagrevanje provodnika. Gubici
-                                    snage se daju jednačinom P=I2R. Za istu datu snagu, zbog ograničenja veličine
-                                    provodnika, prenos sa niskim naponom i velikom strujom će imati više gubitaka od
-                                    prenosa visokim naponom i malom strujom. Ovo važi bez obzira da li se koristi
-                                    jednosmerna ili naizmenična struja. Ipak, teško je transformisati jednosmernu
-                                    struju na visoki napon i malu struju, dok se to kod naizmenične struje može lako i
-                                    efikasno uraditi transformatorima. Ovo je bio ključ uspeha sistema naizmeničnih
-                                    struja.</p>
-
-                                <p>Moderne prenosne mreže koriste naizmenične napone do 765 kV.</p>
-
-                                <h3>Edisonova propaganda</h3>
-
-                                <p>Edison je pokrenuo kampanju da bi obeshrabrio upotrebu naizmenične struje. Edison je
-                                    lično rukovodio nad nekoliko pogubljenja životinja, uglavnom mačaka i pasa
-                                    lutalica, da bi pokazao štampi da je sistem jednosmerne struje bezbedniji od
-                                    sistema naizmenične struje. Edisonov niz pogubljenja životinja je dostigao vrhunac
-                                    sa pogubljenjem slonice Topsi. Takođe je pokušao da populariše termin
-                                    „Vestinhauzovan“ za pogubljenje strujom.</p>
-
-                                <p>Edison se protivio smrtnoj kazni, ali njegova želja da naruži sistem naizmenične
-                                    struje je doveo do izuma električne stolice. Edison (ili neko od njegovih
-                                    zaposlenih) je iskoristio naizmeničnu struju da napravi prvu električnu stolicu za
-                                    državu Njujork sa ciljem promovisanja ideje da je naizmenična struja opasnija od
-                                    jednosmerne. Popularan mit je da je Edison sam izmislio električnu stolicu, ali
-                                    prema nekim drugim izvorima, stolicu su izmislili nekoliko njegovih radnika,
-                                    posebno Harold Braun, radeći u Menlo Parku.</p>
-
-                                <p>Kada je stolica prvi put korišćena, tehničari su loše procenili napon potreban da se
-                                    ubije osuđeni zatvorenik Vilijam Kemler. Prvi udar struje 6. avgusta 1890. nije bio
-                                    dovoljan da se ubije Kemler, ali ga je teško povredio. Procedura je ponovljena, a
-                                    prisutan reporter ju je opisao kao „odvratan spektakl, mnogo gori od vešanja“.
-                                    Džordž Vestinghaus je komentarisao: „Bolje bi uradili da su koristili sekiru“.</p>
-
-                                <p>Niske frekvencije (50-60 Hz) naizmenične struje su opasnije od sličnog nivoa
-                                    jednosmerne struje, pošto naizmenična oscilovanja mogu da naruše rad srca,
-                                    izazivajući ventrikularnu fibrilaciju, koja brzo dovodi do smrti. Međutim, bilo
-                                    koji praktični distribucioni sistem će koristiti naponski nivo koji će biti
-                                    dovoljan da osigura da će opasne jačine struje proticati, bez obzira da li se
-                                    koristi naizmenična ili jednosmerna struja. Pošto su predostrožnosti prema pogibiji
-                                    od udara struje bile slične, na kraju su prednosti prenosa energije sistemom
-                                    naizmeničnih struja prevagnule ovaj teoretski rizik i na kraju je usvojen kao
-                                    standard.</p>
-
-                                <h3>Od Nijagarinih vodopada do Bafala</h3>
-
-                                <p>Stručnjaci su predložili da se iskoriste Nijagarini vodopadi za proizvodnju
-                                    električne energije, iako su kratko razmatrali kompresovan vazduh kao prenosni
-                                    medijum. Protiv predloga Edisona i Dženeral Elektrika, Teslin sistem naizmeničnih
-                                    struja je dobio ugovor od strane Komisije. Komisijom je predsedavao Lord Kelvin, a
-                                    podržavali su je poslovni ljudi poput Dž. P. Morgana, Lorda Rotšilda i Džona
-                                    Džejkoba Astora IV. Radovi su počeli 1893, a Teslina tehnologija je iskorišćena da
-                                    proizvodi energiju iz vodopada.</p>
-
-                                <p>Neki su sumnjali da će sistem proizvoditi dovoljno energije da bi snabdevao
-                                    industriju u Bafalu. Tesla je bio siguran da će raditi, kazavši da Nijagarini
-                                    vodopadi imaju mogućnost da snabdevaju celi istočni deo SAD. 16. novembra 1896,
-                                    počeo je prenos od Nijagarinih vodopada do industrije u Bafalo iz generatora u
-                                    postrojenju Edvard Din Adams. Generatore je naprailo Vestinghausova električna
-                                    korporacija koristeći Tesline patente sistema naizmeničnih struja. Pločice na
-                                    generatorima nose Teslino ime. Tesla je takođe uspostavio standard od 60 Hz za
-                                    Severnu Ameriku. Bilo je potrebno pet godina da se završi kompletno postrojenje.</p>
-
-                                <h3>Ishod rata struja</h3>
-
-                                <p>Teslina naizmenična struja je zamenila jednosmernu struju u mnogim primerima
-                                    proizvodnje i distribucije električne energije, enormno povećavajući domet i
-                                    poboljšavajući bezbednost i efikasnost distribucije energije. Edisonovi pronalasci
-                                    koji su koristili jednosmernu struju su zamenjeni uređajima na naizmeničnu struju
-                                    koju su predložili drugi; primarno Teslini polifazni sistemi, a takođe od i drugih,
-                                    poput Čarlsa Proteusa Štajnmeca (iz Dženeral Elektrika). Teslin sistem na
-                                    Nijagarinim vodopadima je označio kraj Edisonovog plana za prenos energije i bio je
-                                    prekretnica u prihvaćanju naizmenične struje. Na kraju je i Edisonova kompanija
-                                    Dženeral Elektrik prešla na sistem naizmeničnih struja i počela da proizvodi mašine
-                                    za naizmeničnu struju.</p>
-
-                                <p>Njujorška kompanija za distribuciju električne energije, Konsolidejted Edison je
-                                    nastavila da isporučuje jednosmernu struju potrošačima koji su je usvojili početkom
-                                    20. veka, uglavnom za stare liftove. Januara 2005, Konsolidejted Edison je objavila
-                                    da će prekinuti da pruža usluge jednosmerne struje preostalim 1.600 potrošača (svi
-                                    u Menhetnu) do kraja godine.</p>
-
-                                <p>Prenos električne energije može biti komercijalno značajan u kontekstu
-                                    visokonaponskih sistema za prenos jednosmernom strujom (HVDC), koji se koriste za
-                                    prenos energije od udaljenih generatorskih stanica ili za međupovezivanje
-                                    (interkonekciju) odvojenih sistema naizmenične struje. Ovi moderni HVDC sistemi
-                                    koriste čvrste poluprovodničke uređaje koji su bili nedostupni za vreme Rata
-                                    struja. Energija se još uvek pretvara iz i u naizmeničnu struju sa obe strane
-                                    moderne HVDC veze. Prednosti sadašnjih HVDC sistema nad običnim naizmeničnim
-                                    sistemima za prenos uključuju više nominalne vrednosti snage za datu liniju (važno
-                                    pošto je instaliranje novih linija ili čak unapređivanje starih ekstremno skupo) i
-                                    bolja kontrola protoka energije, posebno u privremenim i hitnim uslovima koji često
-                                    dovode do kvarova. Da je moderna HVDC bila dostupna u Edisonovo vreme, postoje
-                                    spekulacije da bi se Rat struja mogao završiti drugačije.</p>
-
-                                <p>Sistemi jednosmerne struje se još uvek univerzalno koriste u lokalnim primenama, kao
-                                    što su u vozilima za osvetljenje, paljenje i punjenje akumulatora. +12V jednosmerne
-                                    struje je najčešće standard u vozilima, iako je industrija objavila planove za
-                                    prelazak na +36V da bi se smanjile potrebe za materijalom za provodnike. Male
-                                    instalacije koje nisu povezane na mrežu koriste solarnu energiju, male hidro i
-                                    turbine sa pogonom na vetar koriste jednosmernu struju od 12, 24 ili 48 volti.
-                                    Standardni 120/240V električni uređaji naizmenične struje se mogu napajati iz
-                                    takvih jednosmernih sistema preko invertora, uređaja koji pretvaraju jednosmernu
-                                    struju u naizmeničnu.</p>
-
-                                <p>Većina telefonskih prenosa i instalacija za upravljanje distribuiraju jednosmernu
-                                    struju interno, tako da lokalne baterije mogu da trenutno nastave da daju energiju
-                                    ako dođe do kvara na spoljašnjem izvoru. -48V je standard, iako mnogi mobilni
-                                    telefoni rade na +24V. Ova moderna praksa se prati u nekim internet serverima,
-                                    posebno u onima koji se nalaze zajedno sa telefonskom opremom, iako je razvoj
-                                    neprekidnog napajanja učinio lakšim da se koristi konvencionalna oprema za
-                                    naizmeničnu struju u takvim kritičnim situacijama.</p>
-
-                                <p>Neki inženjeri farmi servera takođe više vole da striktno postave sisteme za
-                                    jednosmernu struju, pravdajući se da to rade da bi popravili toplotnu efikasnost i
-                                    uvećali pouzdanost napajanja.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-teslaDrustvo" role="tabpanel" aria-labelledby="list-teslaDrustvo-list">
-
-                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
-                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
-                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
-
-                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja
-                                    je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna
-                                    prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su
-                                    bile glavno opterećenje tokom dana.</p>
-
-                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju,
-                                    prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
-                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
-                                    patente polifaznog sistema i druge patente za transformator od Lisijena Galarda i
-                                    Džona Diksona Gibsa.</p>
-
-                            </div>
-                            <div class="tab-pane fade border" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-
-                                <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog Edisonovog
-                                    promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
-                                    naizmeničnom strujom koju je zagovarao Tesla.</p>
-
-                                <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna struja
-                                    je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja patentna
-                                    prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima koje su
-                                    bile glavno opterećenje tokom dana.</p>
-
-                                <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za proizvodnju,
-                                    prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom da bi
-                                    komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
-                                    patente polifaznog sistema i druge patente za transformator od Lisijena Galarda i
-                                    Džona Diksona Gibsa.</p>
-
-                            </div>
-                        </div>
+                    <div class="mainBtn" id="RatStruja">
+                        <p>RAT STRUJA</p>
                     </div>
-                    <div class="col-3">ASIDE</div>
+                    <div class="mainBtn" id="Drustvo">
+                        <p>TESLA I DRUŠTVO</p>
+                    </div>
+                    <div class="mainBtn" id="Pronalasci">
+                        <p>PRONALASCI I NAGRADE</p>
+                    </div>
                 </div>
             </div>
+            <div id="centralContentMain" class="mainContent">
+
+                <!-- Biografija -->
+                <div class="BioContent" id="BioContent">
+                    <h3>Ukratko</h3>
+
+                    <p>Nikola Tesla (10. jul 1856 — 7. januar 1943) bio je jedan od najpoznatijih
+                        srpskih i
+                        svetskih pronalazača i naučnika u oblasti fizike, elektrotehnike i
+                        radiotehnike.</p>
+
+                    <p>Najznačajniji Teslini pronalasci su polifazni sistem, obrtno magnetsko polje,
+                        asinhroni motor, sinhroni motor i Teslin transformator. Takođe, otkrio je jedan
+                        od
+                        načina za generisanje visokofrekventne struje, dao je značajan doprinos u
+                        prenosu i
+                        modulaciji radio-signala, a ostali su zapaženi i njegovi radovi u oblasti
+                        rendgenskih zraka.</p>
+
+                    <p>Njegov sistem naizmeničnih struja je omogućio znatno lakši i efikasniji prenos
+                        električne energije na daljinu. Bio je ključni čovek u izgradnji prve
+                        hidrocentrale
+                        na Nijagarinim vodopadima.</p>
+
+                    <p>Preminuo je u svojoj 87. godini, siromašan i zaboravljen.</p>
+
+                    <p>Jedini je Srbin po kome je nazvana jedna međunarodna jedinica mere, jedinica
+                        mere za
+                        gustinu magnetnog fluksa ili jačinu magnetnog polja — tesla.</p>
+
+                    <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega
+                        u
+                        oblasti elektrotehnike 112.</p>
+
+                </div>
+                <!-- BioRaneGod -->
+                <div class="BioRaneGodContent">
+                    <h3>Rođenje, detinjstvo, porodica</h3>
+
+                    <p>Nikola je rođen 10. jula u Smiljanu u Lici, kao četvrto dete od petoro dece
+                        Milutina, srpskog pravoslavnog sveštenika, i majke Georgine, u Vojnoj krajini
+                        Austrijskog carstva nedaleko od granice sa Osmanskim carstvom. Kršten je u
+                        srpskoj
+                        pravoslavnoj Crkvi Sv. Petra i Pavla u Smiljanu. Ime Nikola je dobio po jednom
+                        i
+                        drugom dedi. Dete je bilo bolešljivo i slabo pa su krštenje zakazali mimo
+                        običaja,
+                        sutradan, bojeći se da neće preživeti. Krštenje deteta obavio je pop Toma
+                        Oklopdžija u crkvi Svetog Petra i Pavla u Smiljanu, a kum je bio Milutinov
+                        prijatelj, kapetan Jovan Drenovac. U crkvenim knjigama je zapisano
+                        crkvenoslovenski
+                        da je dete dobilo ime Nikolaj, a zapravo je dobilo ime po jednom i drugom dedi
+                        Nikola. Nikolin otac je bio nadareni pisac i poeta koji je posedovao bogatu
+                        biblioteku u kojoj je i Nikola provodio svoje detinjstvo čitajući i učeći
+                        strane
+                        jezike. Po jednom verovanju, Tesle vode poreklo od Draganića iz Banjana. Po
+                        navodima Jovana Dučića, Tesle su poreklom iz Stare Hercegovine, od plemena
+                        (Oputni)
+                        Rudinjani iz sela Pilatovaca u današnjoj nikšićkoj opštini. Međutim, o Teslinom
+                        poreklu postoji i verzija da su od Komnenovića iz Banjana u Staroj Hercegovini.
+                        Po
+                        legendi koja se zadržala u Banjanima, Komnenovići su zidali crkvu prilikom čega
+                        su
+                        se posvađali sa majstorima usled čega je došlo do krvavih obračuna. Kao
+                        rezultat
+                        toga, deo Komnenovića se preselio sa Tupana u drugi kraj Banjana zbog čega su
+                        ih
+                        prozvali Čivije (ekseri) koji i danas žive u Banjanima, dok se drugi deo
+                        odselio u
+                        Liku koji je prozvan Tesla po tesli, vrsti tesarskog alata.</p>
+
+                    <p>Nikolina majka bila je vredna žena s mnogo talenata. Bila je vrlo kreativna i
+                        svojim
+                        izumima olakšavala je život na selu. Smatra se da je Nikola Tesla upravo od
+                        majke
+                        nasledio sklonost ka istraživačkom radu. Teslini roditelji su, osim njega,
+                        imali
+                        sina Daneta i kćerke Angelinu i Milku, koje su bile starije od Nikole, i
+                        Maricu,
+                        najmlađe dete u porodici Tesla. Dane je poginuo pri padu s konja kad je Nikola
+                        imao
+                        pet godina i to je ostavilo veliki trag u porodici. Dane je smatran izuzetno
+                        obdarenim, dok se za Nikolu verovalo da je manje inteligentan. Veruje se da je
+                        Danetova smrt osnovni razlog što otac dugo nije pristajao da mu dozvoli da
+                        pohađa
+                        tehničku školu daleko od kuće.</p>
+
+                    <h3>Školovanje</h3>
+
+                    <p>Prvi razred osnovne škole pohađao je u rodnom Smiljanu. Otac Milutin rukopoložen
+                        je
+                        za protu u Gospiću, te se porodica preselila u ovo mesto 1862. godine.
+                        Preostala
+                        tri razreda osnovne škole i trogodišnju Nižu realnu gimnaziju završio je u
+                        Gospiću.
+                        U Gospiću je Nikola prvi put skrenuo pažnju na sebe kada je jedan trgovac
+                        organizovao vatrogasnu službu. Na pokaznoj vežbi kojoj je prisustvovalo mnoštvo
+                        Gospićana, vatrogasci nisu uspeli da ispumpaju vodu iz reke Like. Stručnjaci su
+                        pokušali da otkriju razlog zašto pumpa ne vuče vodu, ali bezuspešno. Tesla,
+                        koji je
+                        tada imao sedam ili osam godina, je instiktivno rešio problem ušavši u reku i
+                        otčepivši drugi kraj creva. Zbog toga je slavljen kao heroj dana. Teško se
+                        razboleo
+                        na kraju trećeg razreda škole 1870. godine. S jeseni je otišao u Rakovac kraj
+                        Karlovca da završi još tri razreda Velike realke. Maturirao je 24. jula 1873.
+                        godine u grupi od svega sedam učenika sa vrlo dobrim uspehom jer je iz nacrtne
+                        geometrije bio dovoljan. Tada je imao 17 godina. Nakon završene mature vratio
+                        se u
+                        Gospić i već prvi dan razboleo od kolere. Bolovao je devet meseci. U tim
+                        okolnostima uspeo je da ubedi oca da mu obeća da će ga umesto na bogosloviju
+                        upisati na studije tehnike.</p>
+
+                    <h3>Studije</h3>
+
+                    <p>Pošto je ozdravio, otac ga šalje ujaku proti Tomi Mandiću, u Tomingaj kod
+                        Gračca, da
+                        boravkom na selu i planini prikuplja snagu za napore koji ga očekuju. Na
+                        studije
+                        elektrotehnike kreće 1875. godine, dve godine nakon mature. Upisuje se u
+                        Politehničku školu u Gracu, u južnoj Štajerskoj (danas Austrija). Tada mu je
+                        bilo
+                        19 godina.</p>
+
+                    <p>Spava veoma malo, svega četiri sata dnevno i sve slobodno vreme provodi u
+                        učenju.
+                        Ispite polaže sa najvišim ocenama. Još tada ga je zainteresovala mogućnost
+                        primene
+                        naizmenične struje. Čita sve što mu dođe pod ruku (100 tomova Volterovih
+                        spisa).
+                        Nikola je o sebi pisao: „Pročitao sam mnogo knjiga, a sa 24 godine sam mnoge
+                        znao i
+                        napamet. Posebno Geteovog Fausta.” Zabrinuti za njegovo zdravlje, profesori
+                        šalju
+                        pisma njegovom ocu u kojima ga savetuju da ispiše sina ukoliko ne želi da se
+                        ubije
+                        prekomernim radom.</p>
+
+                    <p>Nakon prve godine studija izostaje stipendija Carsko-kraljevske general-komande
+                        (kojom su pomagani siromašni učenici iz Vojne krajine). Dva puta se za
+                        stipendiju
+                        obraća slavnoj Matici srpskoj u Novom Sadu. Prvi put 14. oktobra 1876, a drugi
+                        put
+                        1. septembra 1878. godine. Oba puta biva odbijen. U decembru 1878. godine
+                        napušta
+                        Grac i prekida sve veze sa bližnjima. Drugovi su mislili da se utopio u Muri.
+                        Odlazi u Marburg (današnji Maribor) gde dobija posao kod nekog inženjera. Odaje
+                        se
+                        kockanju. Otac ga nakon višemesečne bezuspešne potrage pronalazi i vraća kući.
+                        Otac, uzoran čovek, nije mogao da nađe opravdanje za takvo ponašanje. (Nedugo
+                        potom
+                        otac umire 30. aprila 1879. godine). Nikola je te godine jedno vreme radio u
+                        gospićkoj realnoj gimnaziji.</p>
+
+                    <p>Januara 1880. godine, odlazi u Prag da prema očevoj želji okonča studije. Tamo
+                        ne
+                        može da se upiše na Karlov univerzitet jer u srednjoj školi nije učio grčki.
+                        Najverovatnije je slušao predavanja iz fizike i elektrotehnike. Živeo je na
+                        adresi
+                        Ve Smečkah 13, gde je 2011. godine postavljena memorijalna tabla. Većinu
+                        vremena
+                        provodio je bibliotekama u Klementinumu i narodnoj kavarni u Vodičkovoj ulici.</p>
+
+                    <p>Naredne godine, svestan da njegovi bližnji podnose ogromnu žrtvu zbog njega,
+                        rešava
+                        da ih oslobodi tog tereta i napušta studije.</p>
+
+                    <p>Tesla je naveo u svojoj autobiografiji kako je živo i plastično doživljavao
+                        momente
+                        inspiracije. Od ranih dana je imao sposobnost da u mislima stvori preciznu
+                        sliku
+                        pronalaska pre nego što ga napravi. Ova pojava se u psihologiji naziva
+                        „Vizuelno
+                        razmišljanje”.</p>
+
+                    <h3>Prvi poslovi</h3>
+
+                    <p>Godine 1881. se seli u Budimpeštu gde se zapošljava u telegrafskoj kompaniji pod
+                        nazivom „Američka Telefonska Kompanija”. Tesla je pri otvaranju telefonske
+                        centrale
+                        1881. godine postao glavni telefonijski tehničar u kompaniji. Tu je izmislio
+                        uređaj
+                        koji je, prema nekima, telefonski pojačavač, dok je prema drugima prvi zvučnik.
+                        U
+                        Budimpeštanskom parku se Tesli javila ideja o rešenju problema motora na
+                        naizmeničnu struju bez komutatora, dok je šetao sa prijateljem i recitovao
+                        Geteovog
+                        „Fausta”, a onda iznenada počeo štapom po pesku da crta linije sila obrtnog
+                        magnetskog polja. Za dva naredna meseca je razradio skice mnogih tipova motora
+                        i
+                        modifikacija koje će pet godina kasnije patentirati u Americi.</p>
+
+                    <h3>Tesla i Edison</h3>
+
+                    <p>U Pariz se seli 1882. godine gde radi kao inženjer za Edisonovu kompaniju na
+                        poslovima unapređenja električne opreme. Godine 1883. trebalo je da kompanija u
+                        Štrazburgu (današnji Strazbur) osposobi jednosmernu centralu jer se na
+                        otvaranju
+                        očekivao nemački car lično. Tesli je dat ovaj zadatak i on je boravio u
+                        Strazburu
+                        od 14. oktobra 1883. do 24. februara 1884. godine.Tesla ovde potpisuje prvi
+                        poslovni ugovor u vezi realizacije prvog indukcionog motora, tako je krajem
+                        1883.
+                        godine u Strazburu nastao prvi indukcioni motor koji koristi princip obrtnog
+                        magnetskog polja naizmeničnih struja. Počeo je i sa razvojem raznih vrsta
+                        polifaznih sistema i uređaja sa obrtnim magnetskim poljem (za koje mu je
+                        odobren
+                        patent 1888. godine).</p>
+
+                    <p>Tesla je, 6. juna 1884. godine, došao u Ameriku u Njujork sa pismom preporuke
+                        koje
+                        je dobio od prethodnog šefa Čarlsa Bečelora. U preporuci je Bečelor napisao:
+                        „Ja
+                        poznajem dva velika čoveka, a vi ste jedan od njih; drugi je ovaj mladi čovek”.
+                        Edison je zaposlio Teslu u svojoj kompaniji Edisonove mašine. Tesla je ubrzo
+                        napredovao i uspešno rešavao i najkomplikovanije probleme u kompaniji. Tesli je
+                        ponuđeno da uradi potpuno reprojektovanje generatora jednosmerne struje
+                        Edisonove
+                        kompanije.</p>
+
+                    <p>Pošto je Tesla opisao prirodu dobitaka od njegove nove konstrukcije, Edison mu
+                        je
+                        ponudio 50.000$ (1,1 milion $ danas) kad sve bude uspešno završeno i
+                        napravljeno.
+                        Tesla je radio blizu godinu dana na novim konstrukcijama i Edisonovoj kompaniji
+                        doneo nekoliko patenata koji su potom zaradili neverovatan profit. Kada je
+                        potom
+                        Tesla pitao Edisona o obećanih 50.000$, Edison mu je odgovorio „Tesla, vi ne
+                        razumete naš američki smisao za humor”. i pogazio svoje obećanje. Edison je
+                        pristao
+                        da poveća Teslinu platu za 10$ nedeljno, kao vrstu kompromisa, što znači da bi
+                        trebalo da radi 53 godine da zaradi novac koji mu je bio prvobitno obećan.
+                        Tesla je
+                        dao otkaz momentalno.</p>
+
+                    <p>Edison je kao dobar biznismen zarađivao novac korišćenjem svojih jednosmernih
+                        generatora struje koji su bili veoma skupi za postavljanje i održavanje. Bilo
+                        je
+                        potrebno i po nekoliko stanica jednosmerne struje da bi se obezbedila jedna
+                        gradska
+                        četvrt, dok je Teslin generator naizmenične struje bio dovoljan za snabdevanje
+                        kompletnog grada. Uvidevši efikasnost Teslinih patenata, Edison je koristio
+                        razne
+                        načine da uveri javnost kako je ta struja opasna, hodao je po gradskim vašarima
+                        i
+                        pred medijima naizmeničnom strujom usmrćivao životinje (pse, mačke, i u jednom
+                        slučaju, slona). Na njegovu ideju stvorena je i prva električna stolica. Kao
+                        odgovor tome Tesla se priključio u kolo naizmenične struje što je prouzrokovalo
+                        užarenje niti električne sijalice, i tim pobio predrasude štetnosti naizmenične
+                        struje</p>
+                </div>
+                <!-- BioSrGod -->
+                <div class="BioSrGodContent">
+
+                    <h3>Prvi patenti iz naizmeničnih struja</h3>
+
+                    <p>Godine 1886. Tesla u Njujorku osniva svoju kompaniju, Tesla električno
+                        osvetljenje i
+                        proizvodnja (Tesla Electric Light & Manufacturing). Prvobitni osnivači se nisu
+                        složili sa Teslom oko njegovih planova za uvođenje motora na naizmeničnu struju
+                        i
+                        na kraju je ostao bez finansijera i kompanije. Tesla je potom radio u Njujorku
+                        kao
+                        običan radnik od 1886. do 1887. godine da bi se prehranio i skupio novac za
+                        svoj
+                        novi poduhvat. Prvi elektromotor na naizmeničnu struju bez četkica je uspeo da
+                        konstruiše 1887. godine, i demonstrirao ga pred „Američkim društvom
+                        elektroinženjera” (American Institute of Electrical Engineers, danas IEEE)
+                        1888.
+                        godine. Iste godine je razvio principe svog Teslinog kalema i počeo rad sa
+                        Džordžom
+                        Vestinghausom u laboratorijama njegove firme „Vestinghaus električna i
+                        proizvodna
+                        kompanija” (Westinghouse Electric & Manufacturing Company). Vestinghaus ga je
+                        poslušao u vezi njegovih ideja o višefaznim sistemima koji bi omogućili prenos
+                        naizmenične struje na velika rastojanja.</p>
+
+                    <h3>Eksperimenti sa Iks-zracima</h3>
+
+                    <p>Aprila 1887. godine Tesla počinje istraživanje onoga što će kasnije biti nazvano
+                        Iks-zracima koristeći vakuumsku cev sa jednim kolenom (sličnu njegovom patentu
+                        514170). Ovaj uređaj je drugačiji od drugih ranih cevi za Iks-zrake jer nije
+                        imao
+                        elektrodu-metu. Savremen izraz za fenomen koji je razlog ovakvog dejstva
+                        uređaja je
+                        „probojno zračenje”. Do 1892. godine je Tesla već bio upoznat sa radom Vilhelma
+                        Rendgena i njegovim pronalaskom efekata Iks-zraka.</p>
+
+                    <p>Tesla nije priznavao postojanje opasnosti od rada sa Iks-zracima, pripisujući
+                        oštećenja na koži ozonu pre nego, do tada nepoznatom zračenju: „U vezi štetnih
+                        dejstava na kožu… primećujem da su ona pogrešno tumačena… ona nisu od
+                        Rendgenovih
+                        zraka, već jedino od ozona stvorenog u kontaktu sa kožom. Azotna kiselina bi
+                        takođe
+                        mogla biti odgovorna, ali u manjoj meri”. (Tesla, Electrical Review, 30.
+                        novembar
+                        1895.) Ovo je pogrešna ocena što se tiče katodnih cevi sa Iks-zračenjem. Tesla
+                        je
+                        kasnije primetio opekotine kod asistenta koje potiču od Iks-zraka i stoga je
+                        vršio
+                        eksperimente. Fotografisao je svoju ruku i fotografiju je poslao Rendgenu, ali
+                        nije
+                        javno objavio svoj rad i pronalaske. Ovaj deo istraživanja je propao u požaru u
+                        laboratoriji u ulici Hjuston 1895. godine.</p>
+
+                    <h3>Državljanstvo i laboratorija u ulici Hauston</h3>
+
+                    <p>Američko državljanstvo dobija 30. jula 1891, sa 35 godina, a tada započinje rad
+                        u
+                        svojoj novoj laboratoriji u ulici Hauston u Njujorku. Tu je prvi put prikazao
+                        fluorescentnu sijalicu koja svetli bez žica. Tako se prvi put pojavila ideja o
+                        bežičnom prenosu snage. Sa 36 godina prijavljuje prvi patent iz oblasti
+                        višefaznih
+                        struja. U nastavku istraživanja se posvećuje principima obrtnih magnetnih
+                        polja.
+                        Postaje potpredsednik Američkog instituta elektroinženjera (kasnije IEEE) u
+                        periodu
+                        od 1892. do 1894. godine.</p>
+
+                    <h3>Put u Evropu i smrt majke</h3>
+
+                    <p>Tesla 1892. godine putuje u Evropu, gde prvo drži 3. februara senzacionalno
+                        predavanje u Londonu u Britanskom institutu elektroinženjera „Eksperimenti sa
+                        naizmeničnim strujama visokog potencijala i visoke frekvencije”. Potom u Parizu
+                        19.
+                        februara članovima društva inženjera drži isto predavanje i ostaje mesec dana
+                        pokušavajući, po drugi put, da u Parizu nađe investitore za svoj novi polifazni
+                        sistem struja.</p>
+
+                    <p>Tu ga zatiče telegram sa vešću da mu je majka na samrti. Žurno napušta Pariz da
+                        bi
+                        boravio uz svoju umiruću majku i stiže 15. aprila, par sati pre smrti. Njene
+                        poslednje reči su bile: „Stigao si Nidžo, ponose moj.” Posle njene smrti Tesla
+                        se
+                        razboleo. Proveo je tri nedelje oporavljajući se u Gospiću i selu Tomingaj kod
+                        Gračca, rodnom mestu njegove majke i manastiru Gomirje u kome je arhimandrit
+                        bio
+                        njegov ujak Nikolaj.</p>
+
+                    <h3>Prvi i jedini boravak Nikole Tesle u Beogradu</h3>
+
+                    <p>Jedini boravak Tesle u Beogradu bio je od 1. — 3. juna 1892. godine. Došao je
+                        na poziv Đorđa Stanojevića u Beograd 1. juna. Sledećeg dana je primljen u
+                        audijenciju kod kralja Aleksandra Obrenovića kojom prilikom je odlikovan
+                        ordenom
+                        Svetog Save. Potom je Tesla održao čuveni pozdravni govor u današnjoj zgradi
+                        rektorata, studentima i profesorima beogradske Velike škole.</p>
+
+                    <p><i>„Ja sam, kao što vidite i čujete ostao Srbin i preko mora, gde se
+                            ispitivanjima
+                            bavim. To isto treba da budete i vi i da svojim znanjem i radom podižete
+                            slavu
+                            Srpstva u svetu.”</i> — početak Teslinog govora u Velikoj školi</p>
+
+                    <p>Teslin boravak u Beogradu je ostavio dubokog traga, međutim, iako je dobio 12.
+                        septembra priznanje engleskog udruženja inženjera i naučnika, ubrzo i počasnu
+                        titulu doktora Univerziteta Kolumbija, krajem 1892. godine nije prošao na
+                        izboru za
+                        redovnog člana Srpske kraljevske akademije. Za dopisnog člana izabran je 1894.
+                        a za
+                        redovnog 1937. godine.</p>
+
+                </div>
+                <!-- BioZlGod -->
+                <div class="BioZlGodContent">
+
+                    <h3>Prvih milion volti</h3>
+
+                    <p>Od 1893. do 1895. godine Tesla istražuje naizmenične struje visokih frekvencija.
+                        Uspeva da proizvede naizmeničnu struju napona od milion volti koristeći Teslin
+                        kalem i proučavao je površinski efekat visokih frekvencija u provodnim
+                        materijalima, bavio se sinhronizacijom električnih kola i rezonatorima, lampom
+                        sa
+                        razređenim gasom koja svetli bez žica, bežičnim prenosom električne energije i
+                        prvim prenosom radio-talasa. U Sent Luisu je 1893. godine, pred 6000 gledalaca,
+                        Tesla prikazao na atraktivan način mnoge eksperimente uključujući i prenos
+                        sličan
+                        radio komunikaciji. Obraćajući se Frenklinovom institutu u Filadelfiji i
+                        Nacionalnoj asocijaciji za električno osvetljenje on je opisao i demonstrirao
+                        svoje
+                        principe detaljno. Tesline demonstracije izazivaju veliku pažnju i pomno se
+                        prate.</p>
+
+                    <h3>Svetska izložba u Čikagu</h3>
+
+                    <p>Svetska izložba 1893. godine u Čikagu, Svetska Kolumbovska izložba, je bila
+                        međunarodna izložba na kojoj je po prvi put ceo salon izdvojen samo za
+                        električna
+                        dostignuća. To je bio istorijski događaj jer su Tesla i Vestinghaus predstavili
+                        posetiocima svoj sistem naizmenične struje osvetljavajući celu izložbu.
+                        Prikazane su Tesline fluorescentne sijalice i sijalice sa jednim izvodom. Tesla
+                        je
+                        objasnio princip obrtnog magnetskog polja i indukcionog motora izazivajući
+                        divljenje pri demonstraciji obrtanja bakarnog jajeta i postavljanja na vrh, što
+                        je
+                        predstavljeno kao Kolumbovo jaje. To je korišćeno da se objasni i prikaže model
+                        obrtnog magnetskog polja i induktivnog motora.</p>
+
+                    <h3>Priznanja, nedaće i rat struja</h3>
+
+                    <p>Februara 1894. se pojavljuje prva knjiga o Tesli, „Otkrića, istraživanja i
+                        pisani
+                        radovi Nikole Tesle”. Ubrzo knjiga biva prevedena na srpski i nemački jezik.</p>
+
+                    <p>Veliki udarac za istraživanja se desio 13. marta 1895. godine kada izbija veliki
+                        požar u laboratoriji u Južnoj petoj aveniji broj 35 kojom prilikom je izgorelo
+                        oko
+                        400 električnih motora, električni i mehanički oscilatori, transformatori,
+                        mnoge
+                        originalne konstrukcije i rukopis skoro završene knjige „Priča o 1001
+                        indukcionom
+                        motoru”. Međutim, to je bilo vreme izuzetne Tesline kreativnosti i žilavosti.
+                        Već 15. marta osniva kompaniju pod imenom „Nikola Tesla” i nastavlja rad.</p>
+
+                    <p>Kasnih 1880-ih, Tesla i Tomas Edison su postali protivnici, povodom Edisonovog
+                        pokretanja sistema distribucije električne energije na osnovu jednosmerne
+                        struje
+                        uprkos postojanja efikasnijeg, Teslinog, sistema sa naizmeničnom strujom. Kao
+                        rezultat rata struja, Tomas Edison i Džordž Vestinghaus su zamalo bankrotirali,
+                        pa
+                        je 1897. godine Tesla pocepao ugovor i oslobodio Vestinghausa obaveza plaćanja
+                        korišćenja patenata. Te 1897. godine je Tesla radio ispitivanja koja su vodila
+                        ka
+                        postavljanju osnova za istraživanja u oblasti kosmičkih zračenja.</p>
+
+                    <h3>Otkriće radija i bežičnog prenosa, svećice</h3>
+
+                    <p>Kada je napunio 41 godinu, podneo je svoj prvi patent br. 645576 iz oblasti
+                        radija.
+                        Godinu dana kasnije američkoj vojsci prikazuje model radijski upravljanog
+                        broda,
+                        verujući da vojska može biti zainteresovana za radio-kontrolisana torpeda. Tada
+                        je
+                        on govorio o razvoju „umeća telematike”, vrste robotike. Radio kontrolisan brod
+                        je
+                        javno prikazan 1898. godine na električnoj izložbi u Medison Skver Gardenu.
+                        Samo godinu dana kasnije predstavio je u Čikagu brod koji je bio sposoban i da
+                        zaroni. Ovi uređaji su imali inovativni rezonantni prijemnik i niz logičkih
+                        kola.
+                        Radio-daljinsko upravljanje ostaje novotarija sve do Drugog svetskog rata. Iste
+                        godine Tesla je izmislio električni upaljač ili svećicu za benzinske motore sa
+                        unutrašnjim sagorevanjem, za šta mu je priznat patent 609250 pod nazivom
+                        „Električni upaljač za benzinske motore”.</p>
+
+                    <h3>Kolorado Springs</h3>
+
+                    <p>Tesla je 1899. odlučio da se preseli i nastavi istraživanja u Koloradu Springsu,
+                        gde
+                        je imao dovoljno prostora za svoje eksperimente sa visokim naponima i visokim
+                        učestanostima. Po svom dolasku je novinarima izjavio da namerava da sprovede
+                        eksperiment bežične telegrafije između Pajks Pika (vrh Stenovitih planina u
+                        Koloradu) i Pariza. Teslini eksperimenti su ubrzo postali predmet urbanih
+                        legendi.
+                        U svom dnevniku je opisao eksperimente koji se tiču jonosfere i zemaljskih
+                        talasa
+                        izazvanih transferzalnim ili longitudinalnim talasima.</p>
+
+                    <p>Tesla je u svojoj laboratoriji dokazao da je Zemlja provodnik i vršeći
+                        pražnjenja od
+                        više miliona volti proizvodio veštačke munje duge više desetina metara. Tesla
+                        je
+                        takođe proučavao atmosferski elektricitet, posmatrajući pražnjenja svojim
+                        prijemnicima. Reprodukujući njegove prijemnike i rezonantna kola mnogo godina
+                        kasnije se uvideo nepredvidivi nivo kompleksnosti (raspodeljeni helikoidni
+                        rezonator visokog faktora potiskivanja, radiofrekventno povratno kolo, kola sa
+                        grubim heterodinim efektima i regenerativnim tehnikama). Tvrdio je čak da je
+                        izmerio i postojanje stojećih talasa u Zemlji.</p>
+
+                    <p>U jednom momentu je utvrdio da je u svojoj laboratoriji zabeležio radio-signale
+                        vanzemaljskog porekla. Naučna zajednica je odbacila njegovu objavu i njegove
+                        podatke. On je tvrdio da svojim prijemnicima meri izvesne ponavljajuće signale
+                        koji
+                        su suštinski drugačiji od signala koje je primetio kao posledica oluja i
+                        zemljinog
+                        šuma. Kasnije je detaljno navodio da su signali dolazili u grupama od jednog,
+                        dva,
+                        tri i četiri klika zajedno. Tesla je kasnije proveo deo života pokušavajući da
+                        šalje signal na Mars.</p>
+
+                    <p>Tesla napušta Kolorado Springs 7. januara 1900, a laboratorija se ruši i
+                        rasprodaje
+                        za isplatu duga. Međutim, eksperimenti u Kolorado Springsu su Teslu pripremili
+                        za
+                        sledeći projekat, podizanje postrojenja za bežični prenos energije. U to vreme
+                        prijavljuje patent u oblasti rezonantnih električnih oscilatornih kola.</p>
+
+                    <h3>Svetska radio stanica na Long Ajlandu</h3>
+
+                    <p>Tesla počinje planiranje Svetske radio-stanice — Vardenklif kule 1890. godine sa
+                        150.000 $ (od kojih je 51 % ulaže Džej Pi Morgan). Gradnja počinje 1901.
+                        godine, a
+                        januara 1902. godine ga zatiče vest da je Markoni uspeo da ostvari
+                        transatlantski
+                        prenos signala. Juna 1902. je Tesla premestio laboratoriju iz ulice Hjuston u
+                        Vardenklif. Velelepna kula Svetske radio-stanice još nije dovršena, a glavni
+                        finansijer, Morgan, se novembra povlači iz poduhvata, dok su novine to
+                        propratile
+                        natpisima Teslin Vardenklif je milionska ludorija. Godine 1906. Tesla napušta
+                        kulu
+                        i vraća se u Njujork. Ta kula je tokom Prvog svetskog rata razmontirana, pod
+                        izgovorom da može poslužiti nemačkim špijunima. Američki patentni zavod je
+                        1904.
+                        godine poništio prethodnu odluku i dodelio Đuljelmu Markoniju patent na radio,
+                        čak
+                        je i Mihajlo Pupin stao na stranu Markonija. Od tada počinje Teslina borba za
+                        povratak radio patenta.</p>
+
+                    <p>Na svoj 50. rođendan Tesla je priredio javno predstavljanje svoje turbine bez
+                        lopatica snage 200 konjskih snaga (150 kW) sa 16.000 min−1 (obrtaja u minuti).
+                        Tokom 1910—1911. su u Votersajd elektrane u Njujorku testirane Tesline turbine
+                        snaga između 100 i 5000 konjskih snaga.</p>
+
+                    <p>Markoni 1909. godine dobija Nobelovu nagradu za otkriće radija, odnosno doprinos
+                        u
+                        razvoju bežične telegrafije što čini Teslu duboko ogorčenim. Godine 1915. Tesla
+                        podnosi tužbu protiv Markonija, tražeći sudsku zaštitu svojih prava na radio,
+                        međutim već 1916. je bankrotirao zbog velikih troškova. U tim trenucima njegov
+                        život opasno klizi ka ivici siromaštva.</p>
+
+                    <h3>Prvi svetski rat</h3>
+
+                    <p>Pred Prvi svetski rat Tesla je tražio investitore preko okeana. Kad je počeo
+                        rat,
+                        Tesla je prestao da prima sredstva od svojih evropskih patenata. Nakon rata
+                        izneo
+                        je svoja predviđanja u vezi s posleratnim okruženjem. U članku objavljenom 20.
+                        decembra 1914. godine, Tesla je izneo mišljenje da Liga naroda nije rešenje za
+                        tadašnje probleme.</p>
+
+                    <p>Mada bez materijalnih sredstava Tesli ipak stižu priznanja. Tako 18. maja 1917.
+                        godine dobija zlatnu Edisonovu medalju za otkriće polifaznog sistema
+                        naizmeničnih
+                        struja. Te večeri je izrečena misao da kada bi jednog momenta prestali da rade
+                        svi
+                        Teslini pronalasci, industrija bi prestala da radi, tramvaji i vozovi bi stali,
+                        gradovi bi ostali u mraku, a fabrike bi bile mrtve. Istorijski obrt je upravo u
+                        tome što je Tesla dobio medalju sa imenom čoveka koji mu je bio ljuti protivnik
+                        sa
+                        svojom idejom i izgubio u toj bici, ali je Edison na kraju stekao bogatstvo, a
+                        Tesli je ostalo samo priznanje.</p>
+
+                </div>
+                <!-- BioPozGod -->
+                <div class="BioPozGodContent">
+
+                    <h3>Usamljenički život u starosti</h3>
+
+                    <p>Stanovao je 1927. godine Tesla na petnaestom spratu njujorškog hotela
+                        „Pensilvanija”. Živeo je on samačkim životom u sobi broj 1522 E, vodeći
+                        pažljivo
+                        naročitu brigu o svojoj ishrani. Na njegov sedamdeset peti rođendan 1931.
+                        godine ga Tajm magazin stavlja na naslovnu stranu. U podnaslovu je naglašen
+                        njegov
+                        doprinos sistemima proizvodnje električne energije. Tesli je odobren poslednji
+                        patent 1928. godine u oblasti vazdušnog saobraćaja kada je predstavio prvu
+                        letelicu
+                        sa vertikalnim poletanjem i sletanjem. Tesla 1934. godine piše jugoslovenskom
+                        konzulu Jankoviću i zahvaljuje Mihajlu Pupinu na ideji da vodeće američke
+                        kompanije
+                        formiraju fond kojim bi Tesli bila obezbeđena bezbrižna starost. Tesla odbija
+                        takvu
+                        pomoć i bira da prima skromnu penziju od jugoslovenske vlade i bavi se
+                        istraživanjima u skladu sa svojim mogućnostima. Poslednje godine života proveo
+                        je
+                        hraneći golubove i živeo je uglavnom od godišnjeg honorara iz svoje domovine.</p>
+
+                    <p>U 81. godini Tesla izjavljuje da je kompletirao jedinstvenu teoriju polja.
+                        Tvrdio je
+                        da je razradio sve detalje i da će ih otkriti svetu uskoro. Teorija nikad nije
+                        objavljena, a naučna javnost je već bila ubeđena da se njegove izjave ne mogu
+                        uzimati ozbiljno. Većina danas veruje da Tesla nikad nije u celosti razradio
+                        takvu
+                        teoriju, a ono što je ostalo ima više istorijsku vrednost dok je u fizici
+                        potpuno
+                        odbačeno. Tesla je bio nominovan za orden Svetog Save prvog reda, ali pošto je
+                        imao
+                        američko državljanstvo nije ga dobio, ali je primio orden Svetog Save drugog
+                        reda.</p>
+
+                    <p>Jedno predveče 1937. tokom uobičajnog izlaska udario ga je taksi. Nikola Tesla
+                        je
+                        pao na zemlju nepomičan, a onda je ustao i vratio se u hotel. Prema nekim
+                        izvorima
+                        polomio je tri rebra, a prema drugima to su bile samo lakše povrede. Trebalo mu
+                        je
+                        šest meseci da se oporavi.</p>
+
+                    <p>Godine 1939. na predlog svojih kolega iz kompanije Vestinghaus, vratio se na
+                        posao
+                        za nedeljnu platu od 125 dolara.</p>
+
+                    <h3>Teslina smrt i epilog</h3>
+
+                    <p>Tesla umire od srčanog udara sam u hotelskom apartmanu 3327 na 33. spratu
+                        Njujorker
+                        hotela 7. januara 1943. godine u 87. godini života. Zvanično je zabeleženo da
+                        je umro od srčane tromboze, 7. januara 1943. godine u 22 časa i 30 minuta. I
+                        pored
+                        prodaje patenata u oblasti naizmeničnih struja, Tesla umire siromašan i u
+                        dugovima.
+                        Tim povodom, gradonačelnik Njujorka Lagvardija je rekao: „Nikola Tesla je umro.
+                        Umro je siromašan, ali je bio jedan od najkorisnijih ljudi koji su ikada
+                        živeli.
+                        Ono što je stvorio veliko je i, kako vreme prolazi, postaje još veće”. Posmrtni
+                        obred je održan 12. januara u Crkvi Svetog Jovana Bogoslova na Menhetnu u
+                        Njujorku.
+                        Posle službe telo je kremirano. Ispraćaju Teslinih posmrtnih ostataka
+                        prisustvovalo
+                        je oko 2000 ljudi, među kojima su bile i mnoge značajne ličnosti i nobelovci.
+                        Svi
+                        vodeći njujorški listovi imali su svoje izveštače.</p>
+
+                    <p>Na sahrani je svirao njegov prijatelj, violinista Zlatko Baloković, tada jedan
+                        od
+                        najvećih virtuoza na svetu u pratnji slovenačkog hora Slovan, i to po Teslinoj
+                        želji, prvo Šubertovu kompoziciju „Ave Marija”, a onda srpsku pesmu Tamo
+                        daleko.
+                        Ostao je zabeležen i upečatljiv oproštajni govor tadašnjeg gradonačelnika
+                        Njujorka
+                        Fjorela Henrija Lagvardije.</p>
+
+                    <p>Ubrzo po Teslinoj smrti FBI je zatražio od Useljeničke službe oduzimanje sve
+                        pokojnikove lične stvari i dokumenata, iako je Tesla bio američki državljanin.
+                        Kasnije je Ministarstvo odbrane kontaktiralo FBI, a Teslina dokumenta
+                        proglašena
+                        vrhunskom tajnom. Sva Teslina lična imovina po nalogu Edgara Huvera i
+                        predsednikovih savetnika dobila je etiketu „veoma poverljivo” zbog prirode
+                        Teslinih
+                        otkrića i patenata.</p>
+
+                    <p>Kasnije 1943. godine Vrhovni sud SAD vratio je Tesli pravo na patent 645.576,
+                        priznajući mu prvenstvo na patent radija.</p>
+
+                    <h3>Borba rodbine za ličnu imovinu</h3>
+
+                    <p>Teslina porodica i jugoslovenska ambasada su se borili sa američkim zvaničnicima
+                        za
+                        povratak dokumenata i ličnih stvari, zbog mogućeg značaja nekog od njegovih
+                        istraživanja. Konačno, njegov sestrić Sava Kosanović uspeva da dođe do dela
+                        njegovih ličnih stvari i to je sada smešteno u Muzeju Nikole Tesle u Beogradu.</p>
+
+                    <p>Njegov pepeo je prenesen u Beograd jula 1957. godine. Urna je smeštena u Muzeju
+                        Nikole Tesle gde i danas stoji.</p>
+
+                    <p>Dana 28. februara 2014. je potpisan sporazum između Srpske pravoslavne crkve,
+                        Vlade
+                        Republike Srbije i Privremenog organa Grada Beograda o prenosu posmrtnih
+                        ostataka
+                        Nikole Tesle u portu Hrama Svetog Save.</p>
+
+                </div>
+                <!-- RatStruja -->
+                <div class="RatStrujaContent">
+
+                    <h3>Ukratko</h3>
+
+                    <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog
+                        Edisonovog
+                        promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                        naizmeničnom strujom koju je zagovarao Tesla.</p>
+
+                    <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna
+                        struja
+                        je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja
+                        patentna
+                        prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima
+                        koje su
+                        bile glavno opterećenje tokom dana.</p>
+
+                    <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za
+                        proizvodnju,
+                        prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom
+                        da bi
+                        komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
+                        patente polifaznog sistema i druge patente za transformator od Lisijena Galarda
+                        i
+                        Džona Diksona Gibsa.</p>
+
+                    <h3>Električni prenosni sistem</h3>
+
+                    <p>Prenos električne energije posredstvom jednosmerne struje je imao nekoliko
+                        ograničenja koji su rešeni upotrebom naizmenične struje. Velika opterećenja
+                        jednosmernom strujom su teško mogla biti prenesena na razdaljine veće od jedne
+                        milje bez velikih padova napona. Trožični prenosni sistem je obezbedio
+                        poboljšanje
+                        što se tiče padova napona i veličini provodnika, ali nije rešio problem.
+                        Edisonov
+                        odgovor na ograničenja jednosmernog sistema je bilo da se energija proizvodi
+                        blizu
+                        područja gde se troši i da se postavi više žica da bi se rešio problem
+                        potražnje za
+                        energijom, ali se rešenje pokazalo kao skupo, nepraktično i neizvodljivo.</p>
+
+                    <p>Jednosmerna struja se ne može lako tranformisati na više ili niže napone. To
+                        znači
+                        da se odvojene električne linije moraju postaviti da bi se dostavila snaga
+                        uređajima koji su koristili različite napone, na primer za osvetljenje i
+                        električne
+                        motore. Ovo bi dovelo do velikog broja žica koje bi se trebale postaviti i
+                        održavati, nepotrebno trošeći novac i uvodeći nepotrebne rizike. Velik broj
+                        smrti
+                        tokom Velike mećave 1888. su bile pripisane prekinutim prenosnim linijama koje
+                        su
+                        unele pometnju u gradove koji su koristili jednosmerne mreže.</p>
+
+                    <p>Visoki naizmenični naponi se mogu preneti preko velikih daljina sa malim
+                        padovima
+                        napona (time povećavši efikasnost prenosa) i onda podesno spustiti na niže
+                        napone
+                        za upotrebu u kućama i fabrikama. Kada je Tesla predstavio sistem generatora,
+                        transformatora, motora, provodnika i osvetljenja za naizmeničnu struju u
+                        novembru i
+                        decembru 1887, postalo je jasno da je naizmenična struja budućnost prenosa
+                        električne energije.</p>
+
+                    <h3>Gubici tokom prenosa</h3>
+
+                    <p>Prednost naizmenične struje za distribuciju električne energije na velike
+                        udaljenosti je laka promena napona posredstvom transformatora.</p>
+
+                    <p>Snaga je proizvod napona i struje (P=UI). Za datu snagu, nizak napon zahteva
+                        veliku
+                        struju, a visoki napon malu struju. Međutim, pošto metalni provodnici imaju
+                        izvesnu
+                        električnu otpornost, deo energije će se potrošiti na zagrevanje provodnika.
+                        Gubici
+                        snage se daju jednačinom P=I2R. Za istu datu snagu, zbog ograničenja veličine
+                        provodnika, prenos sa niskim naponom i velikom strujom će imati više gubitaka
+                        od
+                        prenosa visokim naponom i malom strujom. Ovo važi bez obzira da li se koristi
+                        jednosmerna ili naizmenična struja. Ipak, teško je transformisati jednosmernu
+                        struju na visoki napon i malu struju, dok se to kod naizmenične struje može
+                        lako i
+                        efikasno uraditi transformatorima. Ovo je bio ključ uspeha sistema naizmeničnih
+                        struja.</p>
+
+                    <p>Moderne prenosne mreže koriste naizmenične napone do 765 kV.</p>
+
+                    <h3>Edisonova propaganda</h3>
+
+                    <p>Edison je pokrenuo kampanju da bi obeshrabrio upotrebu naizmenične struje.
+                        Edison je
+                        lično rukovodio nad nekoliko pogubljenja životinja, uglavnom mačaka i pasa
+                        lutalica, da bi pokazao štampi da je sistem jednosmerne struje bezbedniji od
+                        sistema naizmenične struje. Edisonov niz pogubljenja životinja je dostigao
+                        vrhunac
+                        sa pogubljenjem slonice Topsi. Takođe je pokušao da populariše termin
+                        „Vestinhauzovan“ za pogubljenje strujom.</p>
+
+                    <p>Edison se protivio smrtnoj kazni, ali njegova želja da naruži sistem naizmenične
+                        struje je doveo do izuma električne stolice. Edison (ili neko od njegovih
+                        zaposlenih) je iskoristio naizmeničnu struju da napravi prvu električnu stolicu
+                        za
+                        državu Njujork sa ciljem promovisanja ideje da je naizmenična struja opasnija
+                        od
+                        jednosmerne. Popularan mit je da je Edison sam izmislio električnu stolicu, ali
+                        prema nekim drugim izvorima, stolicu su izmislili nekoliko njegovih radnika,
+                        posebno Harold Braun, radeći u Menlo Parku.</p>
+
+                    <p>Kada je stolica prvi put korišćena, tehničari su loše procenili napon potreban
+                        da se
+                        ubije osuđeni zatvorenik Vilijam Kemler. Prvi udar struje 6. avgusta 1890. nije
+                        bio
+                        dovoljan da se ubije Kemler, ali ga je teško povredio. Procedura je ponovljena,
+                        a
+                        prisutan reporter ju je opisao kao „odvratan spektakl, mnogo gori od vešanja“.
+                        Džordž Vestinghaus je komentarisao: „Bolje bi uradili da su koristili sekiru“.</p>
+
+                    <p>Niske frekvencije (50-60 Hz) naizmenične struje su opasnije od sličnog nivoa
+                        jednosmerne struje, pošto naizmenična oscilovanja mogu da naruše rad srca,
+                        izazivajući ventrikularnu fibrilaciju, koja brzo dovodi do smrti. Međutim, bilo
+                        koji praktični distribucioni sistem će koristiti naponski nivo koji će biti
+                        dovoljan da osigura da će opasne jačine struje proticati, bez obzira da li se
+                        koristi naizmenična ili jednosmerna struja. Pošto su predostrožnosti prema
+                        pogibiji
+                        od udara struje bile slične, na kraju su prednosti prenosa energije sistemom
+                        naizmeničnih struja prevagnule ovaj teoretski rizik i na kraju je usvojen kao
+                        standard.</p>
+
+                    <h3>Od Nijagarinih vodopada do Bafala</h3>
+
+                    <p>Stručnjaci su predložili da se iskoriste Nijagarini vodopadi za proizvodnju
+                        električne energije, iako su kratko razmatrali kompresovan vazduh kao prenosni
+                        medijum. Protiv predloga Edisona i Dženeral Elektrika, Teslin sistem
+                        naizmeničnih
+                        struja je dobio ugovor od strane Komisije. Komisijom je predsedavao Lord
+                        Kelvin, a
+                        podržavali su je poslovni ljudi poput Dž. P. Morgana, Lorda Rotšilda i Džona
+                        Džejkoba Astora IV. Radovi su počeli 1893, a Teslina tehnologija je iskorišćena
+                        da
+                        proizvodi energiju iz vodopada.</p>
+
+                    <p>Neki su sumnjali da će sistem proizvoditi dovoljno energije da bi snabdevao
+                        industriju u Bafalu. Tesla je bio siguran da će raditi, kazavši da Nijagarini
+                        vodopadi imaju mogućnost da snabdevaju celi istočni deo SAD. 16. novembra 1896,
+                        počeo je prenos od Nijagarinih vodopada do industrije u Bafalo iz generatora u
+                        postrojenju Edvard Din Adams. Generatore je naprailo Vestinghausova električna
+                        korporacija koristeći Tesline patente sistema naizmeničnih struja. Pločice na
+                        generatorima nose Teslino ime. Tesla je takođe uspostavio standard od 60 Hz za
+                        Severnu Ameriku. Bilo je potrebno pet godina da se završi kompletno
+                        postrojenje.</p>
+
+                    <h3>Ishod rata struja</h3>
+
+                    <p>Teslina naizmenična struja je zamenila jednosmernu struju u mnogim primerima
+                        proizvodnje i distribucije električne energije, enormno povećavajući domet i
+                        poboljšavajući bezbednost i efikasnost distribucije energije. Edisonovi
+                        pronalasci
+                        koji su koristili jednosmernu struju su zamenjeni uređajima na naizmeničnu
+                        struju
+                        koju su predložili drugi; primarno Teslini polifazni sistemi, a takođe od i
+                        drugih,
+                        poput Čarlsa Proteusa Štajnmeca (iz Dženeral Elektrika). Teslin sistem na
+                        Nijagarinim vodopadima je označio kraj Edisonovog plana za prenos energije i
+                        bio je
+                        prekretnica u prihvaćanju naizmenične struje. Na kraju je i Edisonova kompanija
+                        Dženeral Elektrik prešla na sistem naizmeničnih struja i počela da proizvodi
+                        mašine
+                        za naizmeničnu struju.</p>
+
+                    <p>Njujorška kompanija za distribuciju električne energije, Konsolidejted Edison je
+                        nastavila da isporučuje jednosmernu struju potrošačima koji su je usvojili
+                        početkom
+                        20. veka, uglavnom za stare liftove. Januara 2005, Konsolidejted Edison je
+                        objavila
+                        da će prekinuti da pruža usluge jednosmerne struje preostalim 1.600 potrošača
+                        (svi
+                        u Menhetnu) do kraja godine.</p>
+
+                    <p>Prenos električne energije može biti komercijalno značajan u kontekstu
+                        visokonaponskih sistema za prenos jednosmernom strujom (HVDC), koji se koriste
+                        za
+                        prenos energije od udaljenih generatorskih stanica ili za međupovezivanje
+                        (interkonekciju) odvojenih sistema naizmenične struje. Ovi moderni HVDC sistemi
+                        koriste čvrste poluprovodničke uređaje koji su bili nedostupni za vreme Rata
+                        struja. Energija se još uvek pretvara iz i u naizmeničnu struju sa obe strane
+                        moderne HVDC veze. Prednosti sadašnjih HVDC sistema nad običnim naizmeničnim
+                        sistemima za prenos uključuju više nominalne vrednosti snage za datu liniju
+                        (važno
+                        pošto je instaliranje novih linija ili čak unapređivanje starih ekstremno
+                        skupo) i
+                        bolja kontrola protoka energije, posebno u privremenim i hitnim uslovima koji
+                        često
+                        dovode do kvarova. Da je moderna HVDC bila dostupna u Edisonovo vreme, postoje
+                        spekulacije da bi se Rat struja mogao završiti drugačije.</p>
+
+                    <p>Sistemi jednosmerne struje se još uvek univerzalno koriste u lokalnim primenama,
+                        kao
+                        što su u vozilima za osvetljenje, paljenje i punjenje akumulatora. +12V
+                        jednosmerne
+                        struje je najčešće standard u vozilima, iako je industrija objavila planove za
+                        prelazak na +36V da bi se smanjile potrebe za materijalom za provodnike. Male
+                        instalacije koje nisu povezane na mrežu koriste solarnu energiju, male hidro i
+                        turbine sa pogonom na vetar koriste jednosmernu struju od 12, 24 ili 48 volti.
+                        Standardni 120/240V električni uređaji naizmenične struje se mogu napajati iz
+                        takvih jednosmernih sistema preko invertora, uređaja koji pretvaraju
+                        jednosmernu
+                        struju u naizmeničnu.</p>
+
+                    <p>Većina telefonskih prenosa i instalacija za upravljanje distribuiraju
+                        jednosmernu
+                        struju interno, tako da lokalne baterije mogu da trenutno nastave da daju
+                        energiju
+                        ako dođe do kvara na spoljašnjem izvoru. -48V je standard, iako mnogi mobilni
+                        telefoni rade na +24V. Ova moderna praksa se prati u nekim internet serverima,
+                        posebno u onima koji se nalaze zajedno sa telefonskom opremom, iako je razvoj
+                        neprekidnog napajanja učinio lakšim da se koristi konvencionalna oprema za
+                        naizmeničnu struju u takvim kritičnim situacijama.</p>
+
+                    <p>Neki inženjeri farmi servera takođe više vole da striktno postave sisteme za
+                        jednosmernu struju, pravdajući se da to rade da bi popravili toplotnu
+                        efikasnost i
+                        uvećali pouzdanost napajanja.</p>
+
+                </div>
+                <!-- Drustvo -->
+                <div class="DrustvoContent">
+
+                    <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog
+                        Edisonovog
+                        promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                        naizmeničnom strujom koju je zagovarao Tesla.</p>
+
+                    <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna
+                        struja
+                        je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja
+                        patentna
+                        prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima
+                        koje su
+                        bile glavno opterećenje tokom dana.</p>
+
+                    <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za
+                        proizvodnju,
+                        prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom
+                        da bi
+                        komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
+                        patente polifaznog sistema i druge patente za transformator od Lisijena Galarda
+                        i
+                        Džona Diksona Gibsa.</p>
+
+                </div>
+                <!-- Pronalasci -->
+                <div class="PronalasciContent">
+
+                    <p>Rat struja je naziv za sukob između Tomasa Edisona i Nikole Tesle zbog
+                        Edisonovog
+                        promovisanja jednosmerne struje za prenos električne energije nad efikasnijom
+                        naizmeničnom strujom koju je zagovarao Tesla.</p>
+
+                    <p>Tokom početnih godina distribucije električne energije, Edisonova jednosmerna
+                        struja
+                        je bila standard u SAD i Evropi i Edison nije želeo da izgubi sva svoja
+                        patentna
+                        prava. Jednosmerna struja je lepo radila sa sijalicama sa užarenim vlaknima
+                        koje su
+                        bile glavno opterećenje tokom dana.</p>
+
+                    <p>Svojim radom sa obrtnim magnetskim poljem, Tesla je razvio sistem za
+                        proizvodnju,
+                        prenos i upotrebu naizmenične struje. On se udružio ca Džordžom Vestinghausom
+                        da bi
+                        komercijalizovao ovaj sistem. Vestinghaus je prethodno kupio prava za Tesline
+                        patente polifaznog sistema i druge patente za transformator od Lisijena Galarda
+                        i
+                        Džona Diksona Gibsa.</p>
+
+                </div>
+            </div>
+            <div id="rightContentAside">
+                <p>ASIDE</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
+                    aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
+                    exercitationem corporis! Recusandae, quas...</p>
+            </div>
         </div>
+
         <!-- footer -->
         <footer>
             <p>footer</p>
@@ -749,7 +1015,6 @@
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
             crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
 </body>
 
 </html>
