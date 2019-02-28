@@ -1,6 +1,16 @@
 /*** fonts */
+/*** no text select class for btns */
+.noSelect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome and Opera */
+  }
 
-/* ** global */
+/*** global */
 html {
 	height: 100%;
 }
@@ -14,8 +24,10 @@ body {
 	font-size: 16px;
 	/* -webkit-text-size-adjust: none; */
     /*background: 
-    background: url(...);*/
-    position: relative;
+	background: url(...);*/
+	background: gray;
+	position: relative;
+	overflow:hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,7 +48,7 @@ header {
 	margin: 0 auto;
 	overflow: hidden;
 	box-sizing: border-box;
-	background: rgb(57, 133, 204);
+	background: lightblue;
 	z-index: 1000;
 }
 /*** footer */
@@ -52,27 +64,100 @@ footer {
 	margin: 0 auto;
 	overflow: hidden;
 	box-sizing: border-box;
-	background: rgb(57, 133, 204);
+	background: lightblue;
 	z-index: 1000;
 }
-/*** main nav+content+aside */
-.mainNavListGroup{
+/*** main content */
+#mainDiv{
 	position: fixed;
+	display: flex;
+	justify-content: space-evenly;
 	top: 65px;
+	bottom: 65px;
 	left: 5px;
 	right: 5px;
-	bottom: 65px;
-	overflow-x: hidden;
+	border: 1px solid black;
 }
-#nav-tabContent{
-	overflow: auto;
-	
+#menuHolder{
+	top: 0px;
+	bottom: 0px;
+	/* left: 0; */
+	width: 16%;
+	max-width: 220px;
+	min-width: 215px;
+	border: 1px solid orange;
+}
+#leftContentMenu{
+	position: absolute;
+	top: 0px;
+	/* left: 0px; */
+	max-width: 215px;
+	min-width: 215px;
+	border: 1px solid red;
+	z-index: 1000;
+}
+.mainBtn, .subBtn{
+	border: 2px solid lightblue;
+	border-radius: 10px;
+	background-color: rgb(202, 187, 168);
+	text-align: center;
+	max-height: 50px;
+	min-height: 50px;
+	line-height: 44px;
+	margin: 2px 2px 2px 2px;
+}
+.subBtn{
+	max-width: 90%;
+	min-width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	/* display: none; */
+}
+.mainBtn:hover, .subBtn:hover{
+	cursor: pointer;
+	border-color: blue;
+}
+#BioRaneGod,#BioSrGod,#BioZlGod,#BioPozGod{
+	display: none;
+}
+/*** central content Main */
+#centralContentMain{
+	top: 0px;
+	bottom: 0px;
+	width: 65%;
+	padding: 5px;
+	border: 1px solid orange;
+	overflow-y: auto;
+}
+.BioContent,.RatStrujaContent,.DrustvoContent,.PronalasciContent,.BioRaneGodContent,.BioSrGodContent,.BioZlGodContent,.BioPozGodContent{
+	display: none;
+}
+/* right content aside */
+#rightContentAside{
+	/* position: absolute; */
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 20%;
+	border: 1px solid violet;
+	overflow-y: auto;
 }
 
-#list-raneGod-list,#list-srGod-list,#list-zlGod-list,#list-pozGod-list{
-	left: 2%;
-	width: 98%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* // Small devices (landscape phones, 576px and up) */
