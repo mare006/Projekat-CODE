@@ -1,3 +1,2 @@
 # Projekat-CODE
-Biografija naučnika
-Nikola Tesla
+Biografija naučnika - Nikola Tesla
