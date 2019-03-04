@@ -81,7 +81,6 @@ footer {
 #menuHolder{
 	top: 0px;
 	bottom: 0px;
-	/* left: 0; */
 	width: 16%;
 	max-width: 220px;
 	min-width: 215px;
@@ -90,7 +89,6 @@ footer {
 #leftContentMenu{
 	position: absolute;
 	top: 0px;
-	/* left: 0px; */
 	max-width: 215px;
 	min-width: 215px;
 	border: 1px solid red;
@@ -106,35 +104,45 @@ footer {
 	line-height: 44px;
 	margin: 2px 2px 2px 2px;
 }
+#subBtns{
+	width: 213px;
+	height: 206px;
+	background-color: transparent;
+	display: none;
+	
+}
+#subBtns p{
+	display: none;
+}
 .subBtn{
 	max-width: 90%;
 	min-width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
-	/* display: none; */
+	display: none;
 }
 .mainBtn:hover, .subBtn:hover{
 	cursor: pointer;
 	border-color: blue;
 }
-#BioRaneGod,#BioSrGod,#BioZlGod,#BioPozGod{
-	display: none;
-}
+
 /*** central content Main */
 #centralContentMain{
 	top: 0px;
 	bottom: 0px;
 	width: 65%;
-	padding: 5px;
+	padding: 15px;
 	border: 1px solid orange;
 	overflow-y: auto;
 }
-.BioContent,.RatStrujaContent,.DrustvoContent,.PronalasciContent,.BioRaneGodContent,.BioSrGodContent,.BioZlGodContent,.BioPozGodContent{
+#centralContentMain{
+	background: transparent;
+}
+#centralContentMain div:nth-child(n) {
 	display: none;
 }
 /* right content aside */
 #rightContentAside{
-	/* position: absolute; */
 	top: 0px;
 	bottom: 0px;
 	right: 0px;
