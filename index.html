@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/Favicon.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon/Favicon.jpg" type="image/x-icon">
 </head>
 
 <body>
     <!-- header -->
     <header>
+        <a class="logo" href="index.html">
+        <img src="img/logo/logo.jpg" alt="">
+        </a>
         <p>header</p>
     </header>
     <!-- main section -->
@@ -42,7 +46,7 @@
                             <p>Pozne godine i smrt</p>
                         </div>
                         <div class="subBtn" id="BioInteraktivna">
-                            <p>Interaktivna Bio</p>
+                            <p>Interaktivna biografija</p>
                         </div>
                     </div>
                     <div class="mainBtn" id="RatStruja">
@@ -677,35 +681,45 @@
                 </div>
                 <!-- BioInteraktivna -->
                 <div class="mainContent" id="BioInteraktivnaContent">
-                    <h3>Ukratko</h3>
+                    <h3>Interaktivna biografija</h3>
+                    <br>
+                    <!-- <div class="carouselHolderDiv"> -->
+                    <iframe src="carousel.html" class="intBioCarousel" frameborder="1"></iframe>
+                    <!-- </div> -->
 
-                    <p>Nikola Tesla (10. jul 1856 — 7. januar 1943) bio je jedan od najpoznatijih
-                        srpskih i
-                        svetskih pronalazača i naučnika u oblasti fizike, elektrotehnike i
-                        radiotehnike.</p>
+                    <div>
+                        <h3>Ukratko</h3>
 
-                    <p>Najznačajniji Teslini pronalasci su polifazni sistem, obrtno magnetsko polje,
-                        asinhroni motor, sinhroni motor i Teslin transformator. Takođe, otkrio je jedan
-                        od
-                        načina za generisanje visokofrekventne struje, dao je značajan doprinos u
-                        prenosu i
-                        modulaciji radio-signala, a ostali su zapaženi i njegovi radovi u oblasti
-                        rendgenskih zraka.</p>
+                        <p>Nikola Tesla (10. jul 1856 — 7. januar 1943) bio je jedan od najpoznatijih
+                            srpskih i
+                            svetskih pronalazača i naučnika u oblasti fizike, elektrotehnike i
+                            radiotehnike.</p>
 
-                    <p>Njegov sistem naizmeničnih struja je omogućio znatno lakši i efikasniji prenos
-                        električne energije na daljinu. Bio je ključni čovek u izgradnji prve
-                        hidrocentrale
-                        na Nijagarinim vodopadima.</p>
+                        <p>Najznačajniji Teslini pronalasci su polifazni sistem, obrtno magnetsko polje,
+                            asinhroni motor, sinhroni motor i Teslin transformator. Takođe, otkrio je jedan
+                            od
+                            načina za generisanje visokofrekventne struje, dao je značajan doprinos u
+                            prenosu i
+                            modulaciji radio-signala, a ostali su zapaženi i njegovi radovi u oblasti
+                            rendgenskih zraka.</p>
 
-                    <p>Preminuo je u svojoj 87. godini, siromašan i zaboravljen.</p>
+                        <p>Njegov sistem naizmeničnih struja je omogućio znatno lakši i efikasniji prenos
+                            električne energije na daljinu. Bio je ključni čovek u izgradnji prve
+                            hidrocentrale
+                            na Nijagarinim vodopadima.</p>
 
-                    <p>Jedini je Srbin po kome je nazvana jedna međunarodna jedinica mere, jedinica
-                        mere za
-                        gustinu magnetnog fluksa ili jačinu magnetnog polja — tesla.</p>
+                        <p>Preminuo je u svojoj 87. godini, siromašan i zaboravljen.</p>
 
-                    <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega
-                        u
-                        oblasti elektrotehnike 112.</p>
+                        <p>Jedini je Srbin po kome je nazvana jedna međunarodna jedinica mere, jedinica
+                            mere za
+                            gustinu magnetnog fluksa ili jačinu magnetnog polja — tesla.</p>
+
+                        <p>Nikola Tesla je autor više od 700 patenata, registrovanih u 25 zemalja, od čega
+                            u
+                            oblasti elektrotehnike 112.</p>
+                    </div>
+
+
 
                 </div>
                 <!-- RatStruja -->
@@ -1106,100 +1120,133 @@
                         rođenja za državni praznik. Tog dana, između ostalog, na svim javnim zgradama mora se istaći
                         državna zastava, a učitelji u svim školama jedan čas posvećuju Tesli.</p>
 
-                    <h3>Da li ste znali?</h3>
+                    <!-- <div id="daLiDivContent"> -->
+                        <h3 id="daLiH3">Da li ste znali?</h3>
 
-                    <ol>
-                        <li>Govorio je mnogo jezika — srpski, engleski, nemački, italijanski, francuski, češki,
-                            mađarski, latinski i slovenački.</li>
-                        <li>Mnogi današnji obožavaoci Tesle su skloni verovanju da je on „čovek koji je izumeo
-                            dvadeseti vek” i nazivaju ga „Prometej dvadesetog veka”.</li>
-                        <li>On je planove za njegove izume čuvao u glavi, a nije ih zapisivao zbog opasnosti od krađe.</li>
-                        <li>U čast doprinosu nauci Nikole Tesle, na stogodišnjici njegovog rođenja 27. juna 1956.
-                            godine u Minhenu, Međunarodna Elektrotehnička Komisija, odlučila je da uvede jedinicu Tesla
-                            (T) za magnetnu indukciju. (T=Wb/m² ili T=N/(m×A))</li>
-                        <li>U svetu filma postoji nagrada <i>Nicola Tesla Award in Recognition for Visionary
-                                Achievements in the World of Digital Technology and Sound</i>. Do sada su je primili:
-                            2005. — Džeri Luis, 2004. — reditelj Džejms Kameron, 2003. — reditelj Džordž Lukas, Sten
-                            Vinston… </li>
-                        <li>Odlukom Vlade Srbije iz avgusta 2010. godine, dan rođenja Nikole Tesle 10. jul proglašen je
-                            Danom nauke u Srbiji.</li>
-                        <li>U Beogradu postoji elektrotehnički institut „Nikola Tesla”, osnovan 1936. godine.</li>
-                        <li>Univerzitetska biblioteka Univerziteta u Nišu nosi naziv Nikola Tesla.</li>
-                        <li>Elektrotehničke škole u Beogradu, Nišu, Zrenjaninu, i Elektrotehnička i građevinska škola u
-                            Jagodini nose ime „Nikola Tesla”.</li>
-                        <li>Dve termocentrale u Srbiji su nazvane „Nikola Tesla A” i „Nikola Tesla B” u čast Tesle.</li>
-                        <li>Akceleratorska instalacija u Institutu za nuklearne nauke Vinča nosi naziv „Tesla”.</li>
-                        <li>Tokom postojanja Republike Srpske Krajine je univerzitet u Kninu nosio naziv Univerzitet
-                            „Nikola Tesla”.</li>
-                        <li>Arhivska građa iz Tesline zaostavštine, iz Muzeja Nikole Tesle, je na osnovu odluke
-                            generalnog direktora Uneska, Koićira Macure, 16. oktobra 2003. godine upisana u registar
-                            Uneska Pamćenje sveta.</li>
-                        <li>Američki hard rok bend Tesla je nazvan po našem naučniku kao izraz zahvalnosti što im je
-                            omogućio struju, bez koje ne bi postojale ni električne gitare.[</li>
-                        <li>Godine 1975. njegovo ime uvedeno je u Dom slavnih pronalazača Amerike.</li>
-                        <li>10. jula 1990. godine u američkom Kongresu je proslavljen Teslin rođendan. Na svečanosti su
-                            govorila devetorica kongresmena i senator Karl Levin iz Mičigena. Takva čast u američkoj
-                            istoriji nije ukazana ni jednom američkom naučniku, čak ni Tomasu Edisonu niti Aleksandru
-                            Grejamu Belu.</li>
-                        <li>Postoji nebesko telo, asteroid, 2244 Tesla. Asteroid je otkrio sa beogradske Astronomske
-                            opservatorije, a zatim i imenovao astronom Milorad B. Protić.</li>
-                        <li>Nils Bor je jednom prilikom rekao: <i>Teslini genijalni pronalasci duboko su uticali na
-                                čitavu našu civilizaciju</i>.</li>
-                        <li>Američki inženjer i profesor B. A. Berend 1921. godine u svojoj knjizi je zapisao: <i>Tesla
-                                nije ostavio drugima ništa više da urade. Kada bismo iz industrije isključili rezultate
-                                Teslinog istraživačkog rada, svi točkovi te industrije prestali bi da se okreću, naši
-                                tramvaji i vozovi bi stali, naši gradovi bi bili u mraku, a fabrike mrtve i besposlene</i>.</li>
-                        <li>Tesla se hranio isključivo vegetarijanskom hranom.[</li>
-                        <li>Čuveni Muzej voštanih figura Madam Tiso, njujorški ogranak slavne londonske kuće, priprema
-                            figuru Nikole Tesle u vosku i postaviće je pored Aleksandra Bela, pronalazača telefona.</li>
-                        <li>Iako su mnogi umetnici želeli da im Tesla pozira za portret, on je to gotovo uvek odbijao.
-                            Jedino je slikarki i princezi Vilmi Ljvov-Parlagi pošlo 1916. godine za rukom da ubedi
-                            Teslu da joj pozira. Nije poznato gde se ovaj portret danas nalazi. Svi ostali Teslini
-                            portreti rađeni su prema fotografijama</li>
-                        <li>Tesla je samo jednom izrazio želju da neki umetnik izradi njegov portret. Godine 1939, 18.
-                            avgusta, uputio je tim povodom svom prijatelju, poznatom jugoslovenskom vajaru Ivanu
-                            Meštroviću telegram u Zagreb. Meštrović je sticajem okolnosti izradio Teslinu bistu tek
-                            1952. godine. Odlivci ove biste čuvaju se u Muzeju Nikole Tesle u Beogradu, u Muzeju Like u
-                            Gospiću i u Tehničkom muzeju u Beču.</li>
-                        <li>Umetnica Marina Abramović snimila je 2003. godine u Muzeju Nikole Tesle u Beogradu
-                            video-instalacije Računajte na nas i Računajte na nas II, koje su inspirisane životom i
-                            delom Nikole Tesle.</li>
-                        <li>Dejvid Boui — legendarni britanski muzičar, tumači ulogu Tesle u filmu Prestiž (2006), gde
-                            nastupa zajedno sa Hjuom Džekmenom, Kristijanom Bejlom, Majklom Kejnom i Skarlet Džohanson.
-                            Prestiž je režirao renomirani britanski reditelj Kristofer Nolan.</li>
-                        <li>Američka kompanija Tesla motori prva je počela serijsku i masovnu proizvodnju čisto
-                            električnog automobila, prvo sportskog Tesla roudster tokom 2008. godine a potom 2012. i
-                            Tesla S porodični auto.</li>
-                        <li>Krater Tesla se nalazi na Mesecu. Ima prečnik od 26 km. Njegova selenografska širina je
-                            −2,0°, a dužina −132.0°.</li>
-                        <li>1943. godine Vrhovni sud SAD vratio je Tesli pravo na patent 645.576, priznajući mu
-                            prvenstvo na patent radija.</li>
-                        <li>Avgusta 1917. godine Tesla je postavio principe u vezi sa frekvencijom i nivoom snage prvog
-                            primitivnog radara. Emil Žirardo je 1934. godine radeći prvi francuski radarski sistem
-                            tvrdio da je sve radio <i>„prema principima koje je postavio gospodin Tesla”</i>.</li>
-                        <li>Na Teslinoj sahrani je svirao njegov prijatelj, violinista Zlatko Baloković, tada jedan od
-                            najvećih virtuoza na svetu u pratnji slovenačkog hora Slovan, i to po Teslinoj želji, prvo
-                            Šubertovu kompoziciju <i>„Ave Marija”</i>, a onda srpsku pesmu <i>„Tamo daleko”</i>.</li>
-                        <li>28. februara 2014. je potpisan sporazum između Srpske pravoslavne crkve, Vlade Republike
-                            Srbije i Privremenog organa Grada Beograda o prenosu posmrtnih ostataka Nikole Tesle u
-                            portu Hrama Svetog Save.</li>
-                        <li>Februara 1894. se pojavljuje prva knjiga o Tesli, „Otkrića, istraživanja i pisani radovi
-                            Nikole Tesle”. Ubrzo knjiga biva prevedena na srpski i nemački jezik.</li>
-                        <li>Jedini boravak Nikole Tesle u Beogradu bio je od 1. — 3. juna 1892. godine.</li>
-                        <li><i>„Ja sam, kao što vidite i čujete ostao Srbin i preko mora, gde se ispitivanjima bavim.
-                                To isto treba da budete i vi i da svojim znanjem i radom podižete slavu Srpstva u
-                                svetu.”</i> — početak Teslinog govora u Velikoj školi</li>
-                        <li><i>„Vaša mržnja, pretvorena u električnu energiju, mogla bi osvetljavati gradove i gradove”</i>
-                            (Srbima i Hrvatima početkom drugog svjetskog rata)</li>
-                        <li><i>„Nikad ne vjeruj sjaju u očima žene! To je vjerovatno svjetlo što prodire kroz njenu
-                                šuplju glavu.”</i></li>
-                        <li><i>„Od svih sila trenja, ona koja najviše usporava ljudski napredak je neznanje, ono što
-                                Buda naziva „Najveće zlo u svetu””.
-                            </i></li>
-                    </ol>
+                        <ol id="daLiOl">
+                            <li>Govorio je mnogo jezika — srpski, engleski, nemački, italijanski, francuski, češki,
+                                mađarski, latinski i slovenački.</li>
+                            <li>Mnogi današnji obožavaoci Tesle su skloni verovanju da je on „čovek koji je izumeo
+                                dvadeseti vek” i nazivaju ga „Prometej dvadesetog veka”.</li>
+                            <li>On je planove za njegove izume čuvao u glavi, a nije ih zapisivao zbog opasnosti od
+                                krađe.</li>
+                            <li>U čast doprinosu nauci Nikole Tesle, na stogodišnjici njegovog rođenja 27. juna 1956.
+                                godine u Minhenu, Međunarodna Elektrotehnička Komisija, odlučila je da uvede jedinicu
+                                Tesla
+                                (T) za magnetnu indukciju. (T=Wb/m² ili T=N/(m×A))</li>
+                            <li>U svetu filma postoji nagrada <i>Nicola Tesla Award in Recognition for Visionary
+                                    Achievements in the World of Digital Technology and Sound</i>. Do sada su je
+                                primili:
+                                Džeri Luis, Džejms Kameron, Džordž Lukas, Sten
+                                Vinston… </li>
+                            <li>Odlukom Vlade Srbije iz avgusta 2010. godine, dan rođenja Nikole Tesle 10. jul
+                                proglašen je
+                                Danom nauke u Srbiji.</li>
+                            <li>U Beogradu postoji elektrotehnički institut „Nikola Tesla”, osnovan 1936. godine.</li>
+                            <li>Univerzitetska biblioteka Univerziteta u Nišu nosi naziv Nikola Tesla.</li>
+                            <li>Elektrotehničke škole u Beogradu, Nišu, Zrenjaninu, i Elektrotehnička i građevinska
+                                škola u
+                                Jagodini nose ime „Nikola Tesla”.</li>
+                            <li>Dve termocentrale u Srbiji su nazvane „Nikola Tesla A” i „Nikola Tesla B” u čast Tesle.</li>
+                            <li>Akceleratorska instalacija u Institutu za nuklearne nauke Vinča nosi naziv „Tesla”.</li>
+                            <li>Tokom postojanja Republike Srpske Krajine je univerzitet u Kninu nosio naziv
+                                Univerzitet
+                                „Nikola Tesla”.</li>
+                            <li>Arhivska građa iz Tesline zaostavštine, iz Muzeja Nikole Tesle, je na osnovu odluke
+                                generalnog direktora Uneska, Koićira Macure, 16. oktobra 2003. godine upisana u
+                                registar
+                                Uneska Pamćenje sveta.</li>
+                            <li>Američki hard rok bend Tesla je nazvan po našem naučniku kao izraz zahvalnosti što im
+                                je
+                                omogućio struju, bez koje ne bi postojale ni električne gitare.</li>
+                            <li>Godine 1975. njegovo ime uvedeno je u Dom slavnih pronalazača Amerike.</li>
+                            <li>10. jula 1990. godine u američkom Kongresu je proslavljen Teslin rođendan. Govorila su
+                                devetorica kongresmena i senator. Takva čast u američkoj istoriji nije ukazana ni
+                                jednom
+                                američkom naučniku, čak ni Tomasu Edisonu niti Aleksandru
+                                Grejamu Belu.</li>
+                            <li>Postoji nebesko telo, asteroid, 2244 Tesla. Asteroid je otkrio sa beogradske
+                                Astronomske
+                                opservatorije, a zatim i imenovao astronom Milorad B. Protić.</li>
+                            <li>Nils Bor je jednom prilikom rekao: <i>Teslini genijalni pronalasci duboko su uticali na
+                                    čitavu našu civilizaciju</i>.</li>
+                            <li>Američki inženjer i profesor B. A. Berend u svojoj knjizi je zapisao: <i>Tesla
+                                    nije ostavio drugima ništa više da urade. Kada bismo iz industrije isključili
+                                    rezultate
+                                    Teslinog istraživačkog rada, svi točkovi te industrije prestali bi da se okreću,
+                                    naši
+                                    tramvaji i vozovi bi stali, naši gradovi bi bili u mraku, a fabrike mrtve i
+                                    besposlene</i>.</li>
+                            <li>Tesla se hranio isključivo vegetarijanskom hranom.</li>
+                            <li>Čuveni Muzej voštanih figura Madam Tiso, njujorški ogranak slavne londonske kuće,
+                                priprema
+                                figuru Nikole Tesle u vosku i postaviće je pored Aleksandra Bela, pronalazača telefona.</li>
+                            <li>Iako su mnogi umetnici želeli da im Tesla pozira za portret, on je to gotovo uvek
+                                odbijao.
+                                Jedino je slikarki i princezi Vilmi Ljvov-Parlagi pošlo 1916. godine za rukom da ubedi
+                                Teslu da joj pozira. Nije poznato gde se ovaj portret danas nalazi. Svi ostali Teslini
+                                portreti rađeni su prema fotografijama.</li>
+                            <li>Tesla je samo jednom izrazio želju da neki umetnik izradi njegov portret. Godine 1939.,
+                                uputio je svom prijatelju, vajaru Ivanu
+                                Meštroviću telegram u Zagreb. Meštrović je izradio Teslinu bistu tek
+                                1952. godine. Njeni odlivci čuvaju se u Muzeju Nikole Tesle u Beogradu, u Muzeju Like u
+                                Gospiću i u Tehničkom muzeju u Beču.</li>
+                            <li>Umetnica Marina Abramović snimila je 2003. godine u Muzeju Nikole Tesle u Beogradu
+                                video-instalacije Računajte na nas i Računajte na nas II, koje su inspirisane životom i
+                                delom Nikole Tesle.</li>
+                            <li>Dejvid Boui — legendarni britanski muzičar, tumači ulogu Tesle u filmu Prestiž (2006),
+                                gde
+                                nastupa zajedno sa Hjuom Džekmenom, Kristijanom Bejlom, Majklom Kejnom i Skarlet
+                                Džohanson.
+                                Prestiž je režirao renomirani britanski reditelj Kristofer Nolan.</li>
+                            <li>Američka kompanija Tesla motori prva je počela serijsku i masovnu proizvodnju čisto
+                                električnog automobila, prvo sportskog Tesla roudster tokom 2008. godine a potom 2012.
+                                i
+                                Tesla S porodični auto.</li>
+                            <li>Krater Tesla se nalazi na Mesecu. Ima prečnik od 26 km. Njegova selenografska širina je
+                                −2,0°, a dužina −132.0°.</li>
+                            <li>1943. godine Vrhovni sud SAD vratio je Tesli pravo na patent 645.576, priznajući mu
+                                prvenstvo na patent radija.</li>
+                            <li>Avgusta 1917. godine Tesla je postavio principe u vezi sa frekvencijom i nivoom snage
+                                prvog
+                                primitivnog radara. Emil Žirardo je 1934. godine radeći prvi francuski radarski sistem
+                                tvrdio da je sve radio <i>„prema principima koje je postavio gospodin Tesla”</i>.</li>
+                            <li>Na Teslinoj sahrani je svirao njegov prijatelj, violinista Zlatko Baloković, tada jedan
+                                od
+                                najvećih virtuoza na svetu u pratnji slovenačkog hora Slovan, i to po Teslinoj želji,
+                                prvo
+                                Šubertovu kompoziciju <i>„Ave Marija”</i>, a onda srpsku pesmu <i>„Tamo daleko”</i>.</li>
+                            <li>28. februara 2014. je potpisan sporazum između Srpske pravoslavne crkve, Vlade
+                                Republike
+                                Srbije i Privremenog organa Grada Beograda o prenosu posmrtnih ostataka Nikole Tesle u
+                                portu Hrama Svetog Save.</li>
+                            <li>Februara 1894. se pojavljuje prva knjiga o Tesli, „Otkrića, istraživanja i pisani
+                                radovi
+                                Nikole Tesle”. Ubrzo knjiga biva prevedena na srpski i nemački jezik.</li>
+                            <li>Jedini boravak Nikole Tesle u Beogradu bio je od 1. — 3. juna 1892. godine.</li>
+                            <li><i>„Ja sam, kao što vidite i čujete ostao Srbin i preko mora, gde se ispitivanjima
+                                    bavim.
+                                    To isto treba da budete i vi i da svojim znanjem i radom podižete slavu Srpstva u
+                                    svetu.”</i> — početak Teslinog govora u Velikoj školi</li>
+                            <li><i>„Vaša mržnja, pretvorena u električnu energiju, mogla bi osvetljavati gradove i
+                                    gradove”</i>
+                                (Srbima i Hrvatima početkom drugog svjetskog rata)</li>
+                            <li><i>„Nikad ne vjeruj sjaju u očima žene! To je vjerovatno svjetlo što prodire kroz njenu
+                                    šuplju glavu.”</i></li>
+                            <li><i>„Od svih sila trenja, ona koja najviše usporava ljudski napredak je neznanje, ono
+                                    što
+                                    Buda naziva „Najveće zlo u svetu””.
+                                </i></li>
+                        </ol>
+
+                    <!-- </div> -->
                 </div>
             </div>
             <div id="rightContentAside">
+                <div id="daLiContent">
+                    <h4>Da li ste znali?</h4>
+                    <p></p>
+                </div>
                 <p>ASIDE</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae ea non reprehenderit
                     aspernatur culpa magnam officia enim reiciendis. Nesciunt aliquam facilis impedit quasi aut labore
@@ -1230,8 +1277,6 @@
             <p>footer</p>
         </footer>
         <script src="js/jquery-3.3.1.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
             crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"

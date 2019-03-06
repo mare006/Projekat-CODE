@@ -1,84 +1,113 @@
 /*** fonts */
+
 /*** no text select class for btns */
 .noSelect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	  -webkit-user-select: none; /* Safari */
-	   -khtml-user-select: none; /* Konqueror HTML */
-		 -moz-user-select: none; /* Firefox */
-		  -ms-user-select: none; /* Internet Explorer/Edge */
-			  user-select: none; /* Non-prefixed version, currently
-									supported by Chrome and Opera */
-  }
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently supported by Chrome and Opera */
+}
 
 /*** global */
 html {
 	height: 100%;
 }
+
 body {
-    height: 100%;
-    width: 100%;
+	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	/* font-family: */
 	font-size: 16px;
 	/* -webkit-text-size-adjust: none; */
-    /*background: 
+	/*background: 
 	background: url(...);*/
-	background: gray;
+	background: rgb(191, 192, 194);
 	position: relative;
-	overflow:hidden;
+	overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
 }
-
+p{
+	font-weight: 400;
+}
 /*** header */
 
 header {
+	display: flex;
 	flex-shrink: 0;
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
-	left: 0;
-	display: block;
+	/* left: 0; */
 	width: 100%;
-	height: 60px;
-    padding: 0 35px 0 24px;
+	max-width: 1440px;
+	height: 61px;
+	padding: 0 35px 0 24px;
 	margin: 0 auto;
 	overflow: hidden;
 	box-sizing: border-box;
-	background: lightblue;
+	background: rgb(18, 39, 59);
 	z-index: 1000;
 }
+
+header>.logo {
+	float: left;
+	width: 300px;
+	max-height: 58px;
+	box-sizing: border-box;
+	padding: 1px 0;
+	width: auto;
+}
+
 /*** footer */
 footer {
+	display: flex;
 	flex-shrink: 0;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	left: 0;
-	display: block;
+	right: 0;
 	width: 100%;
-	height: 60px;
-    padding: 0 35px 0 24px;
-	margin: 0 auto;
+	max-width: 1440px;
+	height: 61px;
+	padding: 0 2rem 0 3.75rem;
+	margin: auto;
 	overflow: hidden;
 	box-sizing: border-box;
-	background: lightblue;
+	background: rgb(18, 39, 59);
 	z-index: 1000;
 }
+
 /*** main content */
-#mainDiv{
-	position: fixed;
+#mainDiv {
+	position: absolute;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	top: 65px;
 	bottom: 65px;
 	left: 5px;
 	right: 5px;
 	border: 1px solid black;
 }
-#menuHolder{
+
+#menuHolder {
 	top: 0px;
 	bottom: 0px;
 	width: 16%;
@@ -86,7 +115,8 @@ footer {
 	min-width: 215px;
 	border: 1px solid orange;
 }
-#leftContentMenu{
+
+#leftContentMenu {
 	position: absolute;
 	top: 0px;
 	max-width: 215px;
@@ -94,7 +124,9 @@ footer {
 	border: 1px solid red;
 	z-index: 1000;
 }
-.mainBtn, .subBtn{
+
+.mainBtn,
+.subBtn {
 	border: 2px solid lightblue;
 	border-radius: 10px;
 	background-color: rgb(202, 187, 168);
@@ -102,55 +134,86 @@ footer {
 	max-height: 50px;
 	min-height: 50px;
 	line-height: 44px;
-	margin: 2px 2px 2px 2px;
+	margin: 2px;
 }
-#subBtns{
+
+#subBtns {
 	width: 213px;
 	height: 206px;
 	background-color: transparent;
 	display: none;
-	
+
 }
-#subBtns p{
+
+#subBtns p {
 	display: none;
 }
-.subBtn{
-	max-width: 90%;
-	min-width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
+
+.subBtn {
+	max-width: 92%;
+	min-width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
 	display: none;
 }
-.mainBtn:hover, .subBtn:hover{
+
+.mainBtn:hover,
+.subBtn:hover {
 	cursor: pointer;
 	border-color: blue;
 }
 
 /*** central content Main */
-#centralContentMain{
+#centralContentMain {
 	top: 0px;
 	bottom: 0px;
 	width: 65%;
-	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	border: 1px solid orange;
 	overflow-y: auto;
-}
-#centralContentMain{
 	background: transparent;
 }
+
 #centralContentMain div:nth-child(n) {
-	display: none;
+	/* display: none; */
 }
-/* right content aside */
-#rightContentAside{
+
+/* .carouselHolderDiv {
+	width: 100%;
+	height: 100%;
+	border: 2px solid blue;
+	padding: 5px;
+} */
+
+.intBioCarousel {
+	/* display: block; */
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	min-width: 808px;
+	min-height: 608px;
+}
+
+
+/*** right content aside */
+#rightContentAside {
 	top: 0px;
 	bottom: 0px;
 	right: 0px;
-	width: 20%;
+	width: 15%;
 	border: 1px solid violet;
 	overflow-y: auto;
+	display: none;
 }
 
+#daLiContent {
+	border: 2px solid red;
+
+}
 
 
 
@@ -169,21 +232,13 @@ footer {
 
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    
-}
+@media (min-width: 576px) {}
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-   
-}
+@media (min-width: 768px) {}
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-   
-}
+@media (min-width: 992px) {}
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-   
-}
+@media (min-width: 1200px) {}
