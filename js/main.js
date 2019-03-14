@@ -1,4 +1,4 @@
-///storage empty
+///////storage empty daLi
 localStorage.removeItem("daLi");
 
 ///obj daLI - da li ste znali
@@ -34,35 +34,86 @@ var daLi = {
     28: 'Avgusta 1917. godine Tesla je postavio principe u vezi sa frekvencijom i nivoom snage prvog primitivnog radara. Emil Žirardo je 1934. godine radeći prvi francuski radarski sistem tvrdio da je sve radio <i>„prema principima koje je postavio gospodin Tesla”</i>.',
     29: 'Na Teslinoj sahrani je svirao njegov prijatelj, violinista Zlatko Baloković, tada jedan od najvećih virtuoza na svetu u pratnji slovenačkog hora Slovan, i to po Teslinoj želji, prvo Šubertovu kompoziciju <i>„Ave Marija”</i>, a onda srpsku pesmu <i>„Tamo daleko”</i>.',
     30: '28. februara 2014. je potpisan sporazum između Srpske pravoslavne crkve, Vlade Republike Srbije i Privremenog organa Grada Beograda o prenosu posmrtnih ostataka Nikole Tesle u portu Hrama Svetog Save.',
-    31: 'Februara 1894. se pojavljuje prva knjiga o Tesli, „Otkrića, istraživanja i pisani radovi Nikole Tesle”. Ubrzo knjiga biva prevedena na srpski i nemački jezik.',
+    31: 'Februara 1894. se pojavljuje prva knjiga o Tesli, <i>„Otkrića, istraživanja i pisani radovi Nikole Tesle”</i>. Ubrzo knjiga biva prevedena na srpski i nemački jezik.',
     32: 'Jedini boravak Nikole Tesle u Beogradu bio je 1.— 3. juna 1892. godine.',
     33: '<i>„Ja sam, kao što vidite i čujete ostao Srbin i preko mora, gde se ispitivanjima bavim. To isto treba da budete i vi i da svojim znanjem i radom podižete slavu Srpstva u svetu.”</i> — početak Teslinog govora u Velikoj školi u Beogradu',
     34: '<i>„Vaša mržnja, pretvorena u električnu energiju, mogla bi osvetljavati gradove i gradove”</i> (Srbima i Hrvatima početkom drugog svjetskog rata)',
-    35: '„Nikad ne veruj sjaju u očima žene! To je verovatno svetlo što prodire kroz njenu šuplju glavu.”</i>',
-    36: '<i>„Od svih sila trenja, ona koja najviše usporava ljudski napredak je neznanje, ono što Buda naziva„ Najveće zlo u svetu””.</i>'
+    35: '<i>„Od svih sila trenja, ona koja najviše usporava ljudski napredak je neznanje, ono što Buda naziva„ Najveće zlo u svetu””.</i>',
+    36: '„Nikad ne veruj sjaju u očima žene! To je verovatno svetlo što prodire kroz njenu šuplju glavu.”</i>',
 };
-// console.log(daLi);
-// console.log(JSON.stringify(daLi));
-
-///storage set
+//////////storage set daLi obj
 localStorage.setItem("daLi", JSON.stringify(daLi));
-// console.log(localStorage);
+// console.log("daLi obj:", daLi);
+// console.log(JSON.stringify(daLi));
+// console.log(localStorage.getItem("daLi"));
+var daLiNizStringova = [];
+for (var brojPitanja in daLi) {
+    daLiNizStringova.push((daLi[brojPitanja])); //prepisujem vrednosti iz oblekta u niz
+}
+// console.log("daLiNizStringova:", daLiNizStringova);
+var daLiRnd = daLiNizStringova.sort(function (a, b) {
+    return 0.5 - Math.random();
+});
+//provera da li je zaista random činjenica - radi
+// console.log("činjenica iz storage 15:", JSON.parse(localStorage.getItem("daLi"))[15]);
+// console.log("random činjenica 15:", daLiRnd[15]);
+//provera na strani - radi
 
-///ovde da li ste znali show rdn
-var getdaLi=localStorage.getItem("daLi");
-var daLiParsed = JSON.parse(getdaLi);
-// var daLiRndSorted=daLiParsed.sort(function (a, b) {
-//     return 0.5 - Math.random();
-// });
-console.log(daLiParsed);
-// console.log(daLiRndSorted);
+//////// klikom na dugme ??? ispisuje sve zanimljive činjenice iz storage
+$(document).ready(function () {
+    $("#btnDaLi").click(function () {
+        $("btnDaLi").fadeOut("slow", function () {
+            $(".daLiIspis p").fadeOut("slow");
+        });
+        $(".daLiIspis").empty();
+        $(".daLiIspis").append("<ul></ul>");
+        for (var brdr in JSON.parse(localStorage.getItem("daLi"))) {
+            $(".daLiIspis ul").append("<li>" + JSON.parse(localStorage.getItem("daLi"))[brdr] + "</li>");
+        }
+    });
+});
 
 
+////za ispis 01 umesto 1 na satu
+function dodajNulu(i) {
+    if (i < 10) {
+        i = "0" + i;
+    } // nula ispred za < 10
+    return i;
+}
+var brojCinjenice = 0;
+//////////sat
+var sati = setInterval(tajmer, 1000);
 
-//za copy/paste da ne kucam 100puta
-// #Bio,#RatStruja,#Drustvo,#Pronalasci,#BioRaneGod,#BioSrGod,#BioZlGod,#BioPozGod
-// .BioContent,.RatStrujaContent,.DrustvoContent,.PronalasciContent,.BioRaneGodContent,.BioSrGodContent,.BioZlGodContent,.BioPozGodContent
-
+function tajmer() {
+    var danas = new Date();
+    var h = danas.getHours();
+    var m = danas.getMinutes();
+    var s = danas.getSeconds();
+    hh = dodajNulu(h);
+    mm = dodajNulu(m);
+    ss = dodajNulu(s);
+    document.getElementById("sat").innerHTML = hh + ":" + mm + ":" + ss;
+    ///rnd daLi na 15 35 55 sekundi menja, kad ispiše sve opet promeša
+    if (brojCinjenice == daLiRnd.length) {
+        brojCinjenice = 0;
+        daLiRnd = [];
+        daLiRnd = daLiNizStringova.sort(function (a, b) {
+            return 0.5 - Math.random();
+        });
+    }
+    if (s == 15 || s == 35 || s == 55) {
+        console.log(brojCinjenice);
+        $(document).ready(function () {
+            $("#daLiContent p").fadeOut(600, function () {
+                $("#daLiContent p").html(daLiRnd[brojCinjenice]);
+            });
+            $("#daLiContent p").fadeIn();
+        });
+        console.log(s);
+        brojCinjenice++;
+    }
+}
 
 ///toggle content
 ///subBtns jq animated in main bar on Bio btn
