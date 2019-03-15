@@ -213,7 +213,9 @@ div#readingNow {
 	width: 23px;
 	height: 100%;
 }
-#anketa,div#btnDaLi{
+
+#anketa,
+div#btnDaLi {
 	width: 150px;
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -223,19 +225,24 @@ div#readingNow {
 	border-image-slice: 1;
 }
 
-div#btnDaLi{
+div#btnDaLi {
 	height: 50px;
-	
+
 }
-#anketa a,#btnDaLi h2{
+
+#anketa a,
+#btnDaLi h2 {
 	padding: 0;
 	margin: 0 auto;
 	color: white;
 }
-#anketa a{
+
+#anketa a {
 	padding-bottom: 10px;
 }
-div#btnDaLi:hover, #anketa:hover {
+
+div#btnDaLi:hover,
+#anketa:hover {
 	border: 2px solid transparent;
 	border-image: linear-gradient(to bottom, #45a6d3 10%, #45a6d300 0%, transparent 90%, transparent 0%, #45a6d3 0%, #45a6d3 100%);
 	border-image-slice: 1;
@@ -379,10 +386,18 @@ div#btnDaLi:hover, #anketa:hover {
 	background: rgb(43, 90, 119);
 }
 
-section:not(#sectionHome){
+section:not(#sectionHome) {
 	display: none;
 }
 
+#unos {
+	padding-left: 15px;
+	padding-top: 0;
+	text-align: left;
+}
+#unos h4{
+	text-align: left;
+}
 
 
 /*** @media */

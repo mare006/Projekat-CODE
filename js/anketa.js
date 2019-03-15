@@ -95,10 +95,10 @@ function validateKomentar() {
 }
 
 function ispis() {
- $("#unos").append("<h5>Vaši podaci su:</h5>");
+ $("#unos").append("<h4>Vaši podaci su:</h4>");
  $("#unos").append("<p>Ime: " + JSON.parse(localStorage.getItem("Name")) + "</p>");
  $("#unos").append("<p>Prezime: " + JSON.parse(localStorage.getItem("Last Name")) + "</p><br>");
- $("#unos").append("<h5>Pitanja i Vaši odgovori su:</h5>");
+ $("#unos").append("<h4>Pitanja i Vaši odgovori su:</h4>");
  $("#unos").append("<p>Da li Vam se dopao sajt? " + JSON.parse(localStorage.getItem("Sajt")) + "</p>");
  $("#unos").append("<p>Šta Vam se najviše dopalo? " + JSON.parse(localStorage.getItem("Sta")) + "</p>");
  $("#unos").append("<p>Koja sekcija Vam se najviše dopala? " + JSON.parse(localStorage.getItem("Sekcija")) + "</p><br>");
