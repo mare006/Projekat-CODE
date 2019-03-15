@@ -59,7 +59,7 @@ var daLiRnd = daLiNizStringova.sort(function (a, b) {
 // console.log("random činjenica 15:", daLiRnd[15]);
 //provera na strani - radi
 
-//////// klikom na dugme ??? ispisuje sve zanimljive činjenice iz storage
+//////// klikom na dugme ??? briše sve u tom divu pa ispisuje sve zanimljive činjenice iz storage 
 $(document).ready(function () {
     $("#btnDaLi").click(function () {
         $("btnDaLi").fadeOut("slow", function () {
@@ -103,45 +103,151 @@ function tajmer() {
         });
     }
     if (s == 15 || s == 35 || s == 55) {
-        console.log(brojCinjenice);
+        // console.log(brojCinjenice);
         $(document).ready(function () {
             $("#daLiContent p").fadeOut(600, function () {
                 $("#daLiContent p").html(daLiRnd[brojCinjenice]);
             });
             $("#daLiContent p").fadeIn();
         });
-        console.log(s);
+        // console.log(s);
         brojCinjenice++;
     }
 }
+/////Main content jq animations show/hide and auto-scroll on btn clicks
+///btnMain on click shows btns, on maouseleave btnHolder hides them
+$(document).ready(function () {
+    $("#btnMain").click(function () {
+        $("#btnHolder").show(400);
+    });
+    $("#btnHolder").mouseleave(function () {
+        $("#btnHolder").hide(400);
+    });
+    $("#btnHolder").click(function () {
+        $("#btnHolder").hide(400);
+    });
+});
 
 ///toggle content
-///subBtns jq animated in main bar on Bio btn
-$(document).ready(function () {
-    $("div#Bio").mouseenter(function () {
-        $("div#subBtns").show(400, function () {
-            $("div#BioRaneGod").slideDown(1000);
-            $("div#BioSrGod").delay(100).slideDown(800);
-            $("div#BioZlGod").delay(200).slideDown(600);
-            $("div#BioPozGod").delay(200).slideDown(400);
-            $("div#BioInteraktivna").delay(300).slideDown(200);
-            if ($("div#BioRaneGod").css("display") == "block") {
-                $("div#subBtns p").show(200);
-            } else $("div#subBtns p").delay(310).show(200);
+
+function BtnClickContent(idBtn, content,naslov) {
+    $(idBtn).click(function () {
+        $("#btnHolder").hide(400);
+        $("#readingNow p").fadeOut(600, function () {
+            $("#readingNow p").html(naslov);
         });
+        $("#readingNow p").fadeIn();
+        if ($("#centralContentMain").scrollTop() > 0) {
+            $("#centralContentMain").delay(400).animate({
+                scrollTop: 0
+            }, 300, "swing", function () {
+                $(".mainContent").delay(400).fadeOut(function () {
+                    $(content).fadeIn();
+                });
+            });
+            return false;
+        } else {
+            $(".mainContent").delay(400).fadeOut(function () {
+                $(content).fadeIn();
+            });
+            return false;
+        }
     });
-    $("#leftContentMenu").mouseleave(function () {
-        $("div#subBtns p").hide(200);
-        $("div#subBtns").delay(200).hide(400);
-    });
-});
-///Main content jq animations show/hide and auto-scroll on btn clicks
-//Bio hide all main content
-$(document).ready(function () {
-    $("#Bio").click(function () {
-        $(".mainContent").fadeOut(400);
-    });
-});
+}
+BtnClickContent("#btnBio", ".mainContent", "BIOGRAFIJA");
+BtnClickContent("#btnRane", "#sectionRane", "RANE<br><br>GODINE");
+BtnClickContent("#btnSr", "#sectionSr", "SREDNJE<br><br>GODINE");
+BtnClickContent("#btnZl", "#sectionZl", "ZLATNE<br><br>GODINE");
+BtnClickContent("#btnPoz", "#sectionPoz", "POZNE<br><br>GODINE");
+BtnClickContent("#btnInter", "#sectionInter", "INTERAKTIVNA");
+BtnClickContent("#btnZanim", "#sectionZanim", "ZANIMLJIVOSTI");
+
+////toogle reading now title
+
+// function BtnClickNaslov(idBtn, naslov) {
+//     $(idBtn).click(function () {
+//         $("#readingNow p").fadeOut(600, function () {
+//             $("#readingNow p").html(naslov);
+//         });
+//         $("#readingNow p").fadeIn();
+//     });
+// }
+
+// BtnClickNaslov("#btnBio", "BIOGRAFIJA");
+// BtnClickNaslov("#btnRane", "RANE GODINE");
+// BtnClickNaslov("#btnSr", "SREDNJE GODINE");
+// BtnClickNaslov("#btnZl", "ZLATNE GODINE");
+// BtnClickNaslov("#btnPoz", "POZNE GODINE");
+// BtnClickNaslov("#btnInter", "INTERAKTIVNA");
+// BtnClickNaslov("#btnZanim", "ZANIMLJIVOSTI");
+
+
+
+
+
+
+// function BtnOClickContent(idBtn, content) {
+//     $(idBtn).click(function () {
+//         if ($("#centralContentMain").scrollTop() > 0) {
+//             $("#centralContentMain").delay(300).animate({
+//                 scrollTop: 0
+//             }, 300, "swing");
+//         }
+//         $(".mainContent").fadeOut( function () {
+//             $(content).fadeIn();
+//         });
+//     });
+// }
+
+
+///ovo radi
+// $("#btnBio").click(function () {
+//     if ($("#centralContentMain").scrollTop() > 0) {
+//         $("#centralContentMain").animate({
+//                 scrollTop: 0
+//             }, 300 ,"swing");
+//     }
+//     $(".mainContent").fadeOut(400, function () {
+//         $(".mainContent").fadeIn(400);
+//     });
+// });
+//radi i ovo
+// $("#btnBio").click(function () {
+//     if ($("#centralContentMain").scrollTop() > 0) {
+//         $("#centralContentMain").animate({
+//                 scrollTop: $("#centralContentMain").offset().top
+//             },
+//             "swing");
+//     }
+//     $(".mainContent").fadeOut(300, function () {
+//         $(".mainContent").fadeIn(300);
+//     });
+// });
+
+
+
+//         $("#centralContentMain").animate({scrollTop:0}, 500, 'swing');
+//         if ($(".subContent,.mainContent").not("#BioRaneGodContent").css("display")=="block") {
+//             $(".subContent,.mainContent").not("#BioRaneGodContent").fadeOut(400);
+//         }
+//         if ($("#BioRaneGodContent").css("display") == "none") {
+//             $("#BioRaneGodContent").fadeIn(400);
+//         }
+
+
+
+
+// function BtnOnClickContent(idBtn, idContent) {
+//     $(idBtn).click(function () {
+//         $("#centralContentMain").animate({
+//             scrollTop: 0
+//         }, 300, 'swing');
+//         $(".mainContent").delay(300).slideUp(300, function () {
+//             $(idContent).delay(300).fadeIn(300);
+//         });
+//     });
+// }
+
 //doteraj malo animaciju
 //Other btns(!Bio) show/hide and autoscroll
 // function BtnOnClickContent(idBtn, idContent) {
