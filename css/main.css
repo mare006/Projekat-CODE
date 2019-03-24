@@ -46,7 +46,6 @@ body {
 	word-wrap: break-word;
 }
 
-
 h1,
 h2,
 h3,
@@ -183,7 +182,6 @@ div#readingNow {
 	line-height: 17px;
 	letter-spacing: 1px;
 	padding: 4px;
-
 }
 
 /*** scroll */
@@ -317,7 +315,6 @@ div#readingNow {
 	font-family: ClockFont;
 	font-size: 25px;
 	line-height: 25px;
-
 }
 
 /*** btns  */
@@ -352,8 +349,6 @@ div#readingNow {
 #btnZanim {
 	min-width: 170px;
 	left: 100px;
-
-
 }
 
 #btnRane,
@@ -362,7 +357,6 @@ div#readingNow {
 #btnPoz {
 	max-width: 156px;
 	margin-left: 7px;
-
 }
 
 #btnBio:hover,
