@@ -5,9 +5,9 @@ Sadržaj:
 
 a) Biografija
 
-    1.Rane godine
+    1. Rane godine
     
-    2.Srednje godine
+    2. Srednje godine
     
     3. Zlatne godine
     
