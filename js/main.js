@@ -1,7 +1,7 @@
-///////storage empty daLi
-localStorage.removeItem("daLi");
+///////storage empty
+localStorage.clear();
 
-///obj daLI - da li ste znali
+///obj daLI - da li ste znali - za dodavanje novih činjenica
 var daLi = {
     0: 'Govorio je mnogo jezika — srpski, engleski, nemački, italijanski, francuski, češki, mađarski, latinski i slovenački.',
     1: 'Mnogi današnji obožavaoci Tesle su skloni verovanju da je on „čovek koji je izumeo dvadeseti vek” i nazivaju ga „Prometej dvadesetog veka”.',
@@ -128,9 +128,9 @@ $(document).ready(function () {
     });
 });
 
-///toggle content
+/////toggle content and reading now title on btn click
 
-function BtnClickContent(idBtn, content,naslov) {
+function BtnClickContent(idBtn, content, naslov) {
     $(idBtn).click(function () {
         $("#btnHolder").hide(400);
         $("#readingNow p").fadeOut(600, function () {
@@ -162,136 +162,3 @@ BtnClickContent("#btnPoz", "#sectionPoz", "POZNE<br><br>GODINE");
 BtnClickContent("#btnInter", "#sectionInter", "INTERAKTIVNA");
 BtnClickContent("#btnZanim", "#sectionZanim", "ZANIMLJIVOSTI");
 
-////toogle reading now title
-
-// function BtnClickNaslov(idBtn, naslov) {
-//     $(idBtn).click(function () {
-//         $("#readingNow p").fadeOut(600, function () {
-//             $("#readingNow p").html(naslov);
-//         });
-//         $("#readingNow p").fadeIn();
-//     });
-// }
-
-// BtnClickNaslov("#btnBio", "BIOGRAFIJA");
-// BtnClickNaslov("#btnRane", "RANE GODINE");
-// BtnClickNaslov("#btnSr", "SREDNJE GODINE");
-// BtnClickNaslov("#btnZl", "ZLATNE GODINE");
-// BtnClickNaslov("#btnPoz", "POZNE GODINE");
-// BtnClickNaslov("#btnInter", "INTERAKTIVNA");
-// BtnClickNaslov("#btnZanim", "ZANIMLJIVOSTI");
-
-
-
-
-
-
-// function BtnOClickContent(idBtn, content) {
-//     $(idBtn).click(function () {
-//         if ($("#centralContentMain").scrollTop() > 0) {
-//             $("#centralContentMain").delay(300).animate({
-//                 scrollTop: 0
-//             }, 300, "swing");
-//         }
-//         $(".mainContent").fadeOut( function () {
-//             $(content).fadeIn();
-//         });
-//     });
-// }
-
-
-///ovo radi
-// $("#btnBio").click(function () {
-//     if ($("#centralContentMain").scrollTop() > 0) {
-//         $("#centralContentMain").animate({
-//                 scrollTop: 0
-//             }, 300 ,"swing");
-//     }
-//     $(".mainContent").fadeOut(400, function () {
-//         $(".mainContent").fadeIn(400);
-//     });
-// });
-//radi i ovo
-// $("#btnBio").click(function () {
-//     if ($("#centralContentMain").scrollTop() > 0) {
-//         $("#centralContentMain").animate({
-//                 scrollTop: $("#centralContentMain").offset().top
-//             },
-//             "swing");
-//     }
-//     $(".mainContent").fadeOut(300, function () {
-//         $(".mainContent").fadeIn(300);
-//     });
-// });
-
-
-
-//         $("#centralContentMain").animate({scrollTop:0}, 500, 'swing');
-//         if ($(".subContent,.mainContent").not("#BioRaneGodContent").css("display")=="block") {
-//             $(".subContent,.mainContent").not("#BioRaneGodContent").fadeOut(400);
-//         }
-//         if ($("#BioRaneGodContent").css("display") == "none") {
-//             $("#BioRaneGodContent").fadeIn(400);
-//         }
-
-
-
-
-// function BtnOnClickContent(idBtn, idContent) {
-//     $(idBtn).click(function () {
-//         $("#centralContentMain").animate({
-//             scrollTop: 0
-//         }, 300, 'swing');
-//         $(".mainContent").delay(300).slideUp(300, function () {
-//             $(idContent).delay(300).fadeIn(300);
-//         });
-//     });
-// }
-
-//doteraj malo animaciju
-//Other btns(!Bio) show/hide and autoscroll
-// function BtnOnClickContent(idBtn, idContent) {
-//     $(idBtn).click(function () {
-//         $("#centralContentMain").stop().animate({
-//             scrollTop: 0
-//         }, 300, 'swing');
-//         $(".mainContent").stop().delay(300).slideUp(300, function () {
-//             $(idContent).delay(300).fadeIn(300);
-//         });
-//     });
-// }
-// $(document).ready(function () {
-//     BtnOnClickContent("#BioRaneGod", "#BioRaneGodContent");
-//     BtnOnClickContent("#BioSrGod", "#BioSrGodContent");
-//     BtnOnClickContent("#BioZlGod", "#BioZlGodContent");
-//     BtnOnClickContent("#BioPozGod", "#BioPozGodContent");
-//     BtnOnClickContent("#BioInteraktivna", "#BioInteraktivnaContent");
-//     BtnOnClickContent("#RatStruja", "#RatStrujaContent");
-//     BtnOnClickContent("#Pronalasci", "#PronalasciContent");
-//     BtnOnClickContent("#Zanimljivosti", "#ZanimljivostiContent");
-// });
-
-
-//ovo isto radi al kod lošiji
-// $(document).ready(function () {
-//     $("#BioRaneGod").click(function () {
-//         $("#centralContentMain").animate({scrollTop:0}, 500, 'swing');
-//         if ($(".subContent,.mainContent").not("#BioRaneGodContent").css("display")=="block") {
-//             $(".subContent,.mainContent").not("#BioRaneGodContent").fadeOut(400);
-//         }
-//         if ($("#BioRaneGodContent").css("display") == "none") {
-//             $("#BioRaneGodContent").fadeIn(400);
-//         }
-//     });
-// });
-// $(document).ready(function () {
-//     $("#BioSrGod").click(function () {
-//         $("#centralContentMain").animate({scrollTop:0}, 500, 'swing');
-//         if ($(".subContent,.mainContent").not("#BioSrGodContent").css("display")=="block") {
-//             $(".subContent,.mainContent").not("#BioSrGodContent").fadeOut(400);
-//         }
-//         if ($("#BioSrGodContent").css("display") == "none") {
-//             $("#BioSrGodContent").fadeIn(400);
-//         }
-//     });
-// });

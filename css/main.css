@@ -214,34 +214,31 @@ div#readingNow {
 	height: 100%;
 }
 
+/* anketa i dali ste znali - zanimljivosti section*/
 #anketa,
-div#btnDaLi {
+#btnDaLi {
 	width: 150px;
 	margin: 0 auto;
-	margin-bottom: 30px;
 	background: rgb(48, 123, 158);
 	border: 2px solid transparent;
 	border-image: linear-gradient(to right, #45a6d3 10%, #45a6d300 0%, transparent 90%, transparent 0%, #45a6d3 0%, #45a6d3 100%);
 	border-image-slice: 1;
 }
 
-div#btnDaLi {
-	height: 50px;
+#anketaDiv,
+#btnDaLiDiv {
+	margin-bottom: 30px;
 
 }
 
-#anketa a,
-#btnDaLi h2 {
+#anketa,
+#btnDaLi {
 	padding: 0;
 	margin: 0 auto;
 	color: white;
 }
 
-#anketa a {
-	padding-bottom: 10px;
-}
-
-div#btnDaLi:hover,
+#btnDaLi:hover,
 #anketa:hover {
 	border: 2px solid transparent;
 	border-image: linear-gradient(to bottom, #45a6d3 10%, #45a6d300 0%, transparent 90%, transparent 0%, #45a6d3 0%, #45a6d3 100%);
@@ -263,8 +260,6 @@ div#btnDaLi:hover,
 	box-sizing: border-box;
 	background: transparent;
 }
-
-
 
 /*** mid content */
 .mainContentHolder {
@@ -294,9 +289,7 @@ div#btnDaLi:hover,
 	padding: 10px;
 }
 
-
-
-/* da li ste znali */
+/* da li ste znali footer*/
 #daLiContent {
 	max-width: 1400px;
 	max-height: 58px;
@@ -390,12 +383,14 @@ section:not(#sectionHome) {
 	display: none;
 }
 
+/*** anketa.html right div */
 #unos {
 	padding-left: 15px;
 	padding-top: 0;
 	text-align: left;
 }
-#unos h4{
+
+#unos h4 {
 	text-align: left;
 }
 

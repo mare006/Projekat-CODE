@@ -1,13 +1,22 @@
-localStorage.clear(); /////////////////////////////obriši posle
+/// brisanje prethodne ankete iz storage-a
+function removeAnketa() {
+    localStorage.removeItem('Name'); 
+    localStorage.removeItem('Last Name'); 
+    localStorage.removeItem('Sajt'); 
+    localStorage.removeItem('Sta'); 
+    localStorage.removeItem('Sekcija'); 
+    localStorage.removeItem('Komentar');
+}
+removeAnketa();
 var error = "";
 
 function validateForm() {
-    var isNameOk = validateName();
-    var isLastNameOk = validateLastName();
-    var isSajtOk = validateSajt();
-    var isStaOk = validateSta();
-    var isSekcjaOk = validateSekcja();
     var isKomentarOk = validateKomentar();
+    var isSekcjaOk = validateSekcja();
+    var isStaOk = validateSta();
+    var isSajtOk = validateSajt();
+    var isLastNameOk = validateLastName();
+    var isNameOk = validateName();
 
     if (isNameOk && isLastNameOk && isSajtOk && isStaOk && isSekcjaOk && isKomentarOk) {
         ispis();
@@ -86,7 +95,7 @@ function validateKomentar() {
     var komentar = document.getElementById('komentar').value;
 
     if (komentar) {
-        setElementToLocalStorage('Komentar', komentar)
+        setElementToLocalStorage('Komentar', komentar);
         return true;
     } else {
         error = 'Unesite kratak komentar!';
@@ -104,5 +113,5 @@ function ispis() {
  $("#unos").append("<p>Koja sekcija Vam se najviše dopala? " + JSON.parse(localStorage.getItem("Sekcija")) + "</p><br>");
  $("#unos").append("<p>Vaš komentar: " + JSON.parse(localStorage.getItem("Komentar")) + "</p><br><br>");
  $("#unos").append("<h3>Hvala na izdvojenom vremenu!!!</h3>");
-    
+ removeAnketa();
 }
